@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy & Terms | Aeronix</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <style>
+        :root {
+            --autonix-bg: #0b0f14;
+            --autonix-dark: #05070a;
+            --autonix-blue: #3b82f6;
+            --autonix-blue-soft: #60a5fa;
+            --autonix-cyan: #38bdf8;
+            --text-main: #e5e7eb;
+            --text-muted: #9ca3af;
+        }
+
+        body {
+            background-color: var(--autonix-bg);
+            background: radial-gradient(circle at top right, #0f172a, var(--autonix-bg));
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Typography Utilities */
+        .text-gradient {
+            background: linear-gradient(90deg, var(--autonix-blue), var(--autonix-cyan));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .text-cyan { color: var(--autonix-cyan) !important; }
+        .text-gray { color: var(--text-muted); }
+
+        /* Navbar */
+        .navbar {
+            padding: 1.25rem 0;
+            background-color: rgba(5, 7, 10, 0.85);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .nav-link {
+            color: var(--text-muted) !important;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .nav-link:hover {
+            color: var(--autonix-blue-soft) !important;
+        }
+
+        /* Mobile Navbar */
+        @media (max-width: 991.98px) {
+            .navbar-collapse {
+                position: absolute;
+                top: 100%;
+                right: 0;
+                width: 45%;
+                min-width: 240px;
+                margin-right: 0.75rem;
+                background: rgba(11, 15, 20, 0.98);
+                backdrop-filter: blur(16px);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                border-radius: 1rem;
+                padding: 1.5rem;
+                margin-top: 0.5rem;
+                box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+                z-index: 1000;
+            }
+            .navbar-nav.align-items-center {
+                align-items: flex-end !important;
+                text-align: right;
+            }
+            .nav-item {
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+                margin-bottom: 0.5rem;
+            }
+            .nav-link {
+                padding: 0.5rem 0;
+                font-size: 1.1rem;
+                width: auto;
+            }
+            .navbar-nav .btn-gradient {
+                margin-top: 0.5rem;
+                width: 100%;
+            }
+        }
+
+        .btn-gradient {
+            background: linear-gradient(135deg, var(--autonix-blue), var(--autonix-blue-soft));
+            border: none;
+            color: white;
+            padding: 0.7rem 1.8rem;
+            border-radius: 10px;
+            font-weight: 600;
+            box-shadow: 0 0 30px rgba(56, 189, 248, 0.35);
+            transition: all 0.3s ease;
+        }
+        .btn-gradient:hover {
+            box-shadow: 0 0 40px rgba(56, 189, 248, 0.5);
+            transform: translateY(-2px);
+            color: white;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #020408;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            margin-top: auto;
+        }
+        .footer-link {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .footer-link:hover {
+            color: var(--autonix-blue-soft);
+        }
+
+        /* Content */
+        .legal-content h1 { font-weight: 700; margin-bottom: 2rem; color: white; }
+        .legal-content h2 { color: var(--autonix-cyan); margin-top: 2rem; margin-bottom: 1rem; font-size: 1.5rem; }
+        .legal-content p { line-height: 1.7; color: var(--text-muted); margin-bottom: 1rem; }
+        .legal-content ul { color: var(--text-muted); }
+        .legal-content li { margin-bottom: 0.5rem; }
+
+        /* Chat Widget Styles needed for shared app.js */
+        .chat-widget-btn { display: none; } /* Hide on privacy page or keep if desired */
+        .chat-window { display: none; }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNavbar">
+        <div class="container-xl">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <!-- Custom SVG Logo: Eye + Globe + Search -->
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="me-1">
+                    <defs>
+                        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#3b82f6"/>
+                            <stop offset="100%" stop-color="#38bdf8"/>
+                        </linearGradient>
+                    </defs>
+                    <path d="M16.5 16.5L21 21" stroke="url(#logoGradient)" stroke-width="2.5" stroke-linecap="round"/>
+                    <path d="M2 12C2 12 6 5 12 5C18 5 22 12 22 12C22 12 18 19 12 19C6 19 2 12 2 12Z" stroke="url(#logoGradient)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="12" cy="12" r="4.5" stroke="url(#logoGradient)" stroke-width="1.5"/>
+                    <path d="M12 7.5C12 7.5 14 9.5 14 12C14 14.5 12 16.5 12 16.5C12 16.5 10 14.5 10 12C10 9.5 12 7.5 12 7.5Z" fill="url(#logoGradient)" fill-opacity="0.2"/>
+                    <path d="M8 12H16" stroke="url(#logoGradient)" stroke-width="1" stroke-opacity="0.6"/>
+                    <path d="M12 7.5V16.5" stroke="url(#logoGradient)" stroke-width="1" stroke-opacity="0.6"/>
+                </svg>
+                <span class="fw-bold text-white ls-1">AERONIX</span>
+            </a>
+            
+            <button class="navbar-toggler border-0 shadow-none text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="bi bi-list fs-2"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center gap-lg-4">
+                    <li class="nav-item"><a class="nav-link" href="index.html#solutions">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#technology">Fleet & Tech</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+                    <li class="nav-item mt-3 mt-lg-0">
+                        <a href="index.html#contact" class="btn btn-gradient">Request Flight</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container legal-content" style="margin-top: 120px; margin-bottom: 80px;">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <h1>Privacy Policy & Terms of Service</h1>
+                <p>Last updated: October 2024</p>
+
+                <h2>1. Drone Operations & Data Privacy</h2>
+                <p>Aeronix respects your privacy. All aerial data collection is conducted in strict compliance with FAA Part 107 regulations and local privacy laws. We do not collect identifiable imagery of private property without explicit consent or contractual authorization.</p>
+
+                <h2>2. Data Security</h2>
+                <p>Flight logs, telemetry data, and captured imagery (Thermal, LiDAR, RGB) are stored on encrypted servers. We retain mission data for 30 days post-delivery unless otherwise specified in your service agreement.</p>
+
+                <h2>3. Flight Regulations</h2>
+                <p>All flight operations are subject to weather conditions, TFRs (Temporary Flight Restrictions), and airspace authorization (LAANC). Aeronix reserves the right to cancel or reschedule flights if safety parameters are not met.</p>
+
+                <h2>4. Liability</h2>
+                <p>While we carry comprehensive liability insurance, Aeronix is not responsible for project delays caused by force majeure events, including severe weather, solar flares affecting GPS, or regulatory grounding.</p>
+
+                <h2 class="mt-5">Contact Us</h2>
+                <p>If you have questions about our privacy practices or flight terms, please contact us at legal@aeronix.com.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="pt-5 pb-4">
+        <div class="container">
+            <div class="row g-4 mb-5">
+                <div class="col-md-4">
+                    <div class="d-flex align-items-center gap-2 mb-3">
+                        <!-- Custom SVG Logo in Footer -->
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="footerLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#3b82f6"/>
+                                    <stop offset="100%" stop-color="#38bdf8"/>
+                                </linearGradient>
+                            </defs>
+                            <path d="M16.5 16.5L21 21" stroke="url(#footerLogoGradient)" stroke-width="2.5" stroke-linecap="round"/>
+                            <path d="M2 12C2 12 6 5 12 5C18 5 22 12 22 12C22 12 18 19 12 19C6 19 2 12 2 12Z" stroke="url(#footerLogoGradient)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="12" cy="12" r="4.5" stroke="url(#footerLogoGradient)" stroke-width="1.5"/>
+                            <path d="M12 7.5C12 7.5 14 9.5 14 12C14 14.5 12 16.5 12 16.5C12 16.5 10 14.5 10 12C10 9.5 12 7.5 12 7.5Z" fill="url(#footerLogoGradient)" fill-opacity="0.2"/>
+                            <path d="M8 12H16" stroke="url(#footerLogoGradient)" stroke-width="1" stroke-opacity="0.6"/>
+                            <path d="M12 7.5V16.5" stroke="url(#footerLogoGradient)" stroke-width="1" stroke-opacity="0.6"/>
+                        </svg>
+                        <span class="h5 fw-bold text-white m-0 tracking-tight">AERONIX</span>
+                    </div>
+                    <p class="text-gray small">Premier drone services provider for industrial, agricultural, and creative applications.</p>
+                </div>
+                <div class="col-6 col-md-2">
+                    <h6 class="text-white fw-bold mb-3">Services</h6>
+                    <ul class="list-unstyled d-flex flex-column gap-2 small">
+                        <li><a href="index.html#solutions" class="footer-link">Aerial Mapping</a></li>
+                        <li><a href="index.html#solutions" class="footer-link">Thermal Inspection</a></li>
+                        <li><a href="index.html#solutions" class="footer-link">Drone Delivery</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-2">
+                    <h6 class="text-white fw-bold mb-3">Company</h6>
+                    <ul class="list-unstyled d-flex flex-column gap-2 small">
+                        <li><a href="index.html#about" class="footer-link">About Us</a></li>
+                        <li><a href="index.html#contact" class="footer-link">Pilot Careers</a></li>
+                        <li><a href="index.html#contact" class="footer-link">Flight Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="text-white fw-bold mb-3">Connect</h6>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-gray fs-5 hover-text-white"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-gray fs-5 hover-text-white"><i class="bi bi-youtube"></i></a>
+                        <a href="#" class="text-gray fs-5 hover-text-white"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-top border-secondary pt-4 d-flex flex-column flex-md-row justify-content-between align-items-center gap-3 text-muted small">
+                <div>&copy; 2025 Aeronix Inc. All rights reserved.</div>
+                <div class="d-flex gap-4">
+                    <a href="#" class="footer-link">Privacy Policy</a>
+                    <a href="#" class="footer-link">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Include app.js to prevent console errors if it's cached/expected, though chat is hidden via CSS -->
+    <script type="module" src="app.js"></script>
+</body>
+</html>
