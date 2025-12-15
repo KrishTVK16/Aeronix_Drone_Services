@@ -15,6 +15,15 @@
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
+    <!-- GenAI SDK Import Map (Required for app.js) -->
+    <script type="importmap">
+    {
+      "imports": {
+        "@google/genai": "https://esm.sh/@google/genai@^1.33.0"
+      }
+    }
+    </script>
+
     <style>
         :root {
             --autonix-bg: #0b0f14;
@@ -141,9 +150,9 @@
         .legal-content ul { color: var(--text-muted); }
         .legal-content li { margin-bottom: 0.5rem; }
 
-        /* Chat Widget Styles needed for shared app.js */
-        .chat-widget-btn { display: none; } /* Hide on privacy page or keep if desired */
-        .chat-window { display: none; }
+        /* Chat Widget Styles - Hidden on Privacy Page but required for app.js safety */
+        .chat-widget-btn { display: none !important; }
+        .chat-window { display: none !important; }
     </style>
 </head>
 <body>
@@ -272,10 +281,24 @@
         </div>
     </footer>
 
+    <!-- Chat Widget Elements (Hidden but required to prevent app.js errors) -->
+    <button id="chatToggle" class="chat-widget-btn">
+        <i class="bi bi-chat-dots-fill"></i>
+    </button>
+    <div id="chatWindow" class="chat-window">
+        <div class="chat-header">
+            <button id="closeChat"></button>
+        </div>
+        <div id="chatBody"></div>
+        <form id="chatForm">
+            <input type="text" id="chatInput">
+        </form>
+    </div>
+
     <!-- Bootstrap Bundle JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     
-    <!-- Include app.js to prevent console errors if it's cached/expected, though chat is hidden via CSS -->
+    <!-- Include app.js -->
     <script type="module" src="app.js"></script>
 </body>
 </html>
