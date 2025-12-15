@@ -1,58 +1,32 @@
 import { GoogleGenAI } from "@google/genai";
 import { logChatInteraction, saveContactForm } from './db.js';
 
-// Scroll Handler for Navbar
+// Navbar Scroll Effect
 const navbar = document.getElementById('mainNavbar');
 if (navbar) {
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 20) {
-            navbar.classList.add('navbar-scrolled');
-        } else {
-            navbar.classList.remove('navbar-scrolled');
-        }
-    });
-}
-
-// Active Section Tracker (Mobile Label)
-const sections = document.querySelectorAll('section');
-const activeLabel = document.getElementById('activeSectionLabel');
-
-if (activeLabel && sections.length > 0) {
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.25 // Trigger when 25% of section is visible
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                let label = '';
-                // Map IDs to friendly names
-                switch(entry.target.id) {
-                    case 'hero': label = ''; break; // No label for hero
-                    case 'solutions': label = 'Services'; break;
-                    case 'technology': label = 'Fleet'; break;
-                    case 'about': label = 'About'; break;
-                    case 'contact': label = 'Contact'; break;
-                }
-                
-                // Update text with a fade effect
-                if (activeLabel.textContent !== label) {
-                    activeLabel.style.opacity = '0';
-                    setTimeout(() => {
-                        activeLabel.textContent = label;
-                        activeLabel.style.opacity = '0.75';
-                    }, 200);
-                }
+    // Add background if page is not index (has content at top)
+    if (!document.querySelector('.hero-section')) {
+        navbar.classList.add('navbar-scrolled');
+    } else {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add('navbar-scrolled');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
             }
         });
-    }, observerOptions);
-
-    sections.forEach(section => {
-        observer.observe(section);
-    });
+    }
 }
+
+// Active Link Highlighter (Based on URL)
+const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+const navLinks = document.querySelectorAll('.nav-link');
+navLinks.forEach(link => {
+    const linkPath = link.getAttribute('href');
+    if (linkPath === currentPath || (currentPath === '' && linkPath === 'index.html')) {
+        link.classList.add('active');
+    }
+});
 
 // Contact Form Handler
 const contactForm = document.getElementById('contactForm');
@@ -120,7 +94,6 @@ if (chatToggle && chatWindow && closeChat && chatForm && chatInput && chatBody) 
         if (apiKey) {
             ai = new GoogleGenAI({ apiKey: apiKey });
         } else {
-            // Note: API Key is expected to be missing in static environments (GitHub Pages)
             console.log("GenAI Mode: UI-only (No API Key found)");
         }
     } catch (e) {

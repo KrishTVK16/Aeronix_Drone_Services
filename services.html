@@ -3,29 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aeronix | Professional Drone Services</title>
-    
-    <!-- Fonts -->
+    <title>Services | Aeronix</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    
-    <!-- Custom Styles -->
     <link rel="stylesheet" href="style.css">
-
-    <!-- GenAI SDK Import Map -->
-    <script type="importmap">
-    {
-      "imports": {
-        "@google/genai": "https://esm.sh/@google/genai@^1.33.0"
-      }
-    }
-    </script>
+    <script type="importmap">{ "imports": { "@google/genai": "https://esm.sh/@google/genai@^1.33.0" } }</script>
 </head>
 <body>
 
@@ -49,7 +34,6 @@
                 </svg>
                 <span class="fw-bold text-white ls-1">AERONIX</span>
             </a>
-            
             <button class="navbar-toggler border-0 shadow-none text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <i class="bi bi-list fs-2"></i>
             </button>
@@ -67,39 +51,78 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero-section" id="hero">
-        <div class="hero-shape shape-1"></div>
-        <div class="hero-shape shape-2"></div>
-        <div class="hero-shape shape-3"></div>
-
-        <div class="container text-center position-relative z-2">
-            <div class="d-inline-flex align-items-center gap-2 badge-custom mb-4">
-                <span class="bg-info rounded-circle" style="width: 8px; height: 8px;"></span>
-                <span class="text-info text-uppercase fw-medium small tracking-wider">Aerial Intelligence Platform</span>
-            </div>
-
-            <h1 class="display-3 fw-bolder text-white mb-4 lh-tight">
-                Sky-High Precision, <br>
-                <span class="text-gradient">Zero-Margin Data</span>
-            </h1>
-
-            <p class="lead text-gray mb-5 mx-auto" style="max-width: 700px;">
-                Aeronix provides professional drone services for aerial mapping, industrial inspection, and autonomous logistics. Deploying the future, from above.
-            </p>
-
-            <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
-                <a href="services.html" class="btn btn-gradient d-flex align-items-center justify-content-center gap-2 text-decoration-none">
-                    View Flight Services <i class="bi bi-airplane-engines"></i>
-                </a>
-                <a href="technology.html" class="btn btn-outline-custom text-decoration-none">
-                    Our Fleet
-                </a>
-            </div>
+    <div class="page-header">
+        <div class="container">
+            <h1 class="display-4 fw-bold text-white mb-3">Aerial Solutions</h1>
+            <p class="text-gray mx-auto lead" style="max-width: 600px;">Deploying enterprise-grade UAVs to capture critical data and monitor assets.</p>
         </div>
+    </div>
 
-        <div class="position-absolute bottom-0 mb-5 animate-bounce-slow text-gray">
-            <i class="bi bi-chevron-down fs-3"></i>
+    <!-- Services Content -->
+    <section class="py-5">
+        <div class="container pb-5">
+            <div class="row g-4">
+                <!-- Service 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <div class="position-relative z-2">
+                            <div class="icon-box"><i class="bi bi-map"></i></div>
+                            <h4 class="text-white fw-bold mb-3">Survey & Mapping</h4>
+                            <p class="text-gray small mb-3">High-resolution orthomosaics, 3D LiDAR point clouds, and topographical maps with cm-level accuracy.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Service 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <div class="position-relative z-2">
+                            <div class="icon-box"><i class="bi bi-building-check"></i></div>
+                            <h4 class="text-white fw-bold mb-3">Infrastructure Inspection</h4>
+                            <p class="text-gray small mb-3">Inspect bridges, cell towers, and wind turbines safely and rapidly using high-zoom optics.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Service 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <div class="position-relative z-2">
+                            <div class="icon-box"><i class="bi bi-thermometer-sun"></i></div>
+                            <h4 class="text-white fw-bold mb-3">Thermal Imaging</h4>
+                            <p class="text-gray small mb-3">Detect heat leaks in solar farms or perform search and rescue operations with radiometric thermal cameras.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Service 4 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <div class="position-relative z-2">
+                            <div class="icon-box"><i class="bi bi-box-seam"></i></div>
+                            <h4 class="text-white fw-bold mb-3">Drone Logistics</h4>
+                            <p class="text-gray small mb-3">Last-mile autonomous delivery for medical supplies and critical industrial parts.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Service 5 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <div class="position-relative z-2">
+                            <div class="icon-box"><i class="bi bi-flower1"></i></div>
+                            <h4 class="text-white fw-bold mb-3">Precision Agriculture</h4>
+                            <p class="text-gray small mb-3">Multispectral crop analysis (NDVI) to optimize irrigation and fertilizer usage.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Service 6 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <div class="position-relative z-2">
+                            <div class="icon-box"><i class="bi bi-camera-reels"></i></div>
+                            <h4 class="text-white fw-bold mb-3">Cinematography</h4>
+                            <p class="text-gray small mb-3">Stabilized 6K RAW aerial footage for film, real estate, and event coverage.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -109,20 +132,6 @@
             <div class="row g-4 mb-5">
                 <div class="col-md-4">
                     <div class="d-flex align-items-center gap-2 mb-3">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <defs>
-                                <linearGradient id="footerLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" stop-color="#3b82f6"/>
-                                    <stop offset="100%" stop-color="#38bdf8"/>
-                                </linearGradient>
-                            </defs>
-                            <path d="M16.5 16.5L21 21" stroke="url(#footerLogoGradient)" stroke-width="2.5" stroke-linecap="round"/>
-                            <path d="M2 12C2 12 6 5 12 5C18 5 22 12 22 12C22 12 18 19 12 19C6 19 2 12 2 12Z" stroke="url(#footerLogoGradient)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <circle cx="12" cy="12" r="4.5" stroke="url(#footerLogoGradient)" stroke-width="1.5"/>
-                            <path d="M12 7.5C12 7.5 14 9.5 14 12C14 14.5 12 16.5 12 16.5C12 16.5 10 14.5 10 12C10 9.5 12 7.5 12 7.5Z" fill="url(#footerLogoGradient)" fill-opacity="0.2"/>
-                            <path d="M8 12H16" stroke="url(#footerLogoGradient)" stroke-width="1" stroke-opacity="0.6"/>
-                            <path d="M12 7.5V16.5" stroke="url(#footerLogoGradient)" stroke-width="1" stroke-opacity="0.6"/>
-                        </svg>
                         <span class="h5 fw-bold text-white m-0 tracking-tight">AERONIX</span>
                     </div>
                     <p class="text-gray small">Premier drone services provider for industrial, agricultural, and creative applications.</p>
@@ -163,29 +172,16 @@
     </footer>
 
     <!-- Chat Widget -->
-    <button id="chatToggle" class="chat-widget-btn">
-        <i class="bi bi-chat-dots-fill"></i>
-    </button>
+    <button id="chatToggle" class="chat-widget-btn"><i class="bi bi-chat-dots-fill"></i></button>
     <div id="chatWindow" class="chat-window">
         <div class="chat-header">
-            <div class="d-flex align-items-center gap-2">
-                <i class="bi bi-robot"></i>
-                <span class="fw-bold">Nexus AI</span>
-            </div>
+            <div class="d-flex align-items-center gap-2"><i class="bi bi-robot"></i><span class="fw-bold">Nexus AI</span></div>
             <button id="closeChat" class="btn btn-link text-white p-0 text-decoration-none"><i class="bi bi-x-lg"></i></button>
         </div>
-        <div id="chatBody" class="chat-body">
-            <div class="message model">Greetings. I am Nexus, your aerial operations assistant.</div>
-        </div>
-        <form id="chatForm" class="chat-input-area">
-            <input type="text" id="chatInput" class="chat-input" placeholder="Ask about drones..." autocomplete="off">
-            <button type="submit" class="btn btn-primary btn-sm rounded-circle d-flex align-items-center justify-content-center" style="width: 36px; height: 36px;">
-                <i class="bi bi-send-fill"></i>
-            </button>
-        </form>
+        <div id="chatBody" class="chat-body"><div class="message model">Greetings. I am Nexus.</div></div>
+        <form id="chatForm" class="chat-input-area"><input type="text" id="chatInput" class="chat-input" placeholder="Ask..."><button type="submit" class="btn btn-primary btn-sm rounded-circle"><i class="bi bi-send-fill"></i></button></form>
     </div>
 
-    <!-- Bootstrap Bundle JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script type="module" src="app.js"></script>
 </body>
