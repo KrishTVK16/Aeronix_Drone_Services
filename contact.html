@@ -5,6 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | Aeronix</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Request a quote for professional drone services. FAA Part 107 certified pilots ready for your project. Contact Aeronix for aerial mapping, inspection, and delivery.">
+    <meta name="keywords"
+        content="contact drone services, get quote, aerial mapping quote, drone inspection, UAV consultation">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aeronix.com/contact.html">
+    <meta property="og:title" content="Contact Us | Aeronix">
+    <meta property="og:description"
+        content="Request a quote for professional drone services. FAA Part 107 certified pilots ready for your project.">
+    <meta property="og:image" content="https://aeronix.com/favicon.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="https://aeronix.com/contact.html">
+    <meta name="twitter:title" content="Contact Us | Aeronix">
+    <meta name="twitter:description"
+        content="Request a quote for professional drone services. FAA Part 107 certified pilots ready for your project.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
@@ -74,27 +95,88 @@
         <div class="container text-center">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
-                    <form id="contactForm"
-                        class="d-flex gap-2 justify-content-center flex-column flex-sm-row max-w-md mx-auto"
-                        style="max-width: 500px;">
-                        <input type="email" id="contactEmail"
-                            class="form-control bg-dark text-white border-secondary py-3 px-4"
-                            placeholder="Enter work email" required>
-                        <button type="submit" class="btn btn-gradient py-3 px-4">Get Quote</button>
+                    <!-- Alert Area for Success/Error Messages -->
+                    <div id="formAlert" class="alert d-none mb-4" role="alert"></div>
+
+                    <form id="contactForm" class="text-start" style="max-width: 600px; margin: 0 auto;">
+                        <div class="row g-3">
+                            <!-- Name Field -->
+                            <div class="col-md-6">
+                                <label for="contactName" class="form-label text-white">Name <span
+                                        class="text-danger">*</span></label>
+                                <input type="text" id="contactName"
+                                    class="form-control bg-dark text-white border-secondary py-2 px-3"
+                                    placeholder="Your name" required>
+                                <div class="invalid-feedback">Please enter your name.</div>
+                            </div>
+
+                            <!-- Email Field -->
+                            <div class="col-md-6">
+                                <label for="contactEmail" class="form-label text-white">Email <span
+                                        class="text-danger">*</span></label>
+                                <input type="email" id="contactEmail"
+                                    class="form-control bg-dark text-white border-secondary py-2 px-3"
+                                    placeholder="your.email@company.com" required>
+                                <div class="invalid-feedback">Please enter a valid email.</div>
+                            </div>
+
+                            <!-- Subject Field -->
+                            <div class="col-12">
+                                <label for="contactSubject" class="form-label text-white">Subject <span
+                                        class="text-danger">*</span></label>
+                                <input type="text" id="contactSubject"
+                                    class="form-control bg-dark text-white border-secondary py-2 px-3"
+                                    placeholder="What service are you interested in?" required>
+                                <div class="invalid-feedback">Please enter a subject.</div>
+                            </div>
+
+                            <!-- Message Field -->
+                            <div class="col-12">
+                                <label for="contactMessage" class="form-label text-white">Message <span
+                                        class="text-danger">*</span></label>
+                                <textarea id="contactMessage" rows="5"
+                                    class="form-control bg-dark text-white border-secondary py-2 px-3"
+                                    placeholder="Tell us about your project..." required></textarea>
+                                <div class="invalid-feedback">Please enter your message.</div>
+                            </div>
+
+                            <!-- Honeypot for spam protection (hidden) -->
+                            <div class="col-12 d-none">
+                                <input type="text" id="honeypot" name="website" tabindex="-1" autocomplete="off">
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div class="col-12 text-center mt-4">
+                                <button type="submit" class="btn btn-gradient py-3 px-5">
+                                    <span class="btn-text">Send Message</span>
+                                    <i class="bi bi-send ms-2"></i>
+                                </button>
+                            </div>
+                        </div>
                     </form>
-                    <p class="text-muted mt-3 small">All flights comply with FAA Part 107 regulations.</p>
+                    <p class="text-muted mt-4 small text-center">All flights comply with FAA Part 107 regulations.</p>
 
                     <div class="row mt-5">
-                        <div class="col-md-4">
-                            <h5 class="text-white">Email</h5>
-                            <p class="text-gray">contact@aeronix.com</p>
+                        <div class="col-md-4 text-center">
+                            <h5 class="text-white mb-3">
+                                <i class="bi bi-envelope me-2"></i>Email
+                            </h5>
+                            <a href="mailto:contact@aeronix.com" class="text-decoration-none">
+                                <p class="text-gray hover-text-white transition">contact@aeronix.com</p>
+                            </a>
                         </div>
-                        <div class="col-md-4">
-                            <h5 class="text-white">Phone</h5>
-                            <p class="text-gray">+1 (555) 123-4567</p>
+                        <div class="col-md-4 text-center">
+                            <h5 class="text-white mb-3">
+                                <i class="bi bi-telephone me-2"></i>Phone
+                            </h5>
+                            <a href="tel:+15551234567" class="text-decoration-none">
+                                <p class="text-gray hover-text-white transition">+1 (555) 123-4567</p>
+                            </a>
                         </div>
-                        <div class="col-md-4">
-                            <h5 class="text-white">HQ</h5>
+                        <div class="col-md-4 text-center">
+                            <h5 class="text-white mb-3">
+                                <i class="bi bi-geo-alt me-2"></i>HQ
+                            </h5>
                             <p class="text-gray">San Francisco, CA</p>
                         </div>
                     </div>
@@ -127,9 +209,17 @@
                 </div>
                 <div class="col-md-4">
                     <h6 class="text-white fw-bold mb-3">Connect</h6>
-                    <div class="d-flex gap-3"><a href="#" class="text-gray fs-5"><i class="bi bi-instagram"></i></a><a
-                            href="#" class="text-gray fs-5"><i class="bi bi-youtube"></i></a><a href="#"
-                            class="text-gray fs-5"><i class="bi bi-linkedin"></i></a></div>
+                    <div class="d-flex gap-3">
+                        <a href="https://instagram.com/aeronix" target="_blank" rel="noopener noreferrer"
+                            class="text-gray fs-5 social-icon social-instagram" aria-label="Follow us on Instagram"><i
+                                class="bi bi-instagram"></i></a>
+                        <a href="https://youtube.com/@aeronix" target="_blank" rel="noopener noreferrer"
+                            class="text-gray fs-5 social-icon social-youtube" aria-label="Subscribe on YouTube"><i
+                                class="bi bi-youtube"></i></a>
+                        <a href="https://linkedin.com/company/aeronix" target="_blank" rel="noopener noreferrer"
+                            class="text-gray fs-5 social-icon social-linkedin" aria-label="Connect on LinkedIn"><i
+                                class="bi bi-linkedin"></i></a>
+                    </div>
                 </div>
             </div>
             <div

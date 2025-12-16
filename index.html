@@ -6,9 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aeronix | Professional Drone Services</title>
 
-    <!-- Fonts -->
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Professional drone services for aerial mapping, industrial inspection, and autonomous logistics. Sky-high precision with zero-margin data. FAA Part 107 certified pilots.">
+    <meta name="keywords"
+        content="drone services, aerial mapping, thermal inspection, drone delivery, UAV services, industrial inspection">
+    <meta name="author" content="Aeronix Inc">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aeronix.com/">
+    <meta property="og:title" content="Aeronix | Professional Drone Services">
+    <meta property="og:description"
+        content="Professional drone services for aerial mapping, industrial inspection, and autonomous logistics. Sky-high precision with zero-margin data.">
+    <meta property="og:image" content="https://aeronix.com/favicon.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://aeronix.com/">
+    <meta name="twitter:title" content="Aeronix | Professional Drone Services">
+    <meta name="twitter:description"
+        content="Professional drone services for aerial mapping, industrial inspection, and autonomous logistics.">
+    <meta name="twitter:image" content="https://aeronix.com/favicon.png">
+
+    <!-- Performance Optimization: Resource Hints -->
+    <!-- DNS Prefetch for faster domain resolution -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+
+    <!-- Preconnect for critical third-party origins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
 
@@ -26,16 +58,20 @@
 
 <body>
 
+    <!-- Skip to Content Link for Accessibility -->
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg fixed-top" id="mainNavbar">
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNavbar" role="navigation" aria-label="Main navigation">
         <div class="container-xl">
-            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html" aria-label="Aeronix home">
                 <img src="favicon.png" alt="Aeronix Logo" width="36" height="36" class="me-1">
                 <span class="fw-bold text-white ls-1">AERONIX</span>
             </a>
 
             <button class="navbar-toggler border-0 shadow-none text-white" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarNav">
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation menu">
                 <i class="bi bi-list fs-2"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -89,46 +125,49 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-section" id="hero">
-        <div class="hero-shape shape-1"></div>
-        <div class="hero-shape shape-2"></div>
-        <div class="hero-shape shape-3"></div>
+    <main id="main-content">
+        <section class="hero-section" id="hero" aria-label="Welcome to Aeronix">
+            <div class="hero-shape shape-1"></div>
+            <div class="hero-shape shape-2"></div>
+            <div class="hero-shape shape-3"></div>
 
-        <div class="container text-center position-relative z-2">
-            <div class="d-inline-flex align-items-center gap-2 badge-custom mb-4">
-                <span class="bg-info rounded-circle" style="width: 8px; height: 8px;"></span>
-                <span class="text-info text-uppercase fw-medium small tracking-wider">Aerial Intelligence
-                    Platform</span>
+            <div class="container text-center position-relative z-2">
+                <div class="d-inline-flex align-items-center gap-2 badge-custom mb-4">
+                    <span class="bg-info rounded-circle" style="width: 8px; height: 8px;"></span>
+                    <span class="text-info text-uppercase fw-medium small tracking-wider">Aerial Intelligence
+                        Platform</span>
+                </div>
+
+                <h1 class="display-3 fw-bolder text-white mb-4 lh-tight">
+                    Sky-High Precision, <br>
+                    <span class="text-gradient">Zero-Margin Data</span>
+                </h1>
+
+                <p class="lead text-gray mb-5 mx-auto" style="max-width: 700px;">
+                    Aeronix provides professional drone services for aerial mapping, industrial inspection, and
+                    autonomous
+                    logistics. Deploying the future, from above.
+                </p>
+
+                <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+                    <a href="services.html"
+                        class="btn btn-gradient d-flex align-items-center justify-content-center gap-2 text-decoration-none">
+                        View Flight Services <i class="bi bi-airplane-engines"></i>
+                    </a>
+                    <a href="technology.html" class="btn btn-outline-custom text-decoration-none">
+                        Our Fleet
+                    </a>
+                </div>
             </div>
 
-            <h1 class="display-3 fw-bolder text-white mb-4 lh-tight">
-                Sky-High Precision, <br>
-                <span class="text-gradient">Zero-Margin Data</span>
-            </h1>
-
-            <p class="lead text-gray mb-5 mx-auto" style="max-width: 700px;">
-                Aeronix provides professional drone services for aerial mapping, industrial inspection, and autonomous
-                logistics. Deploying the future, from above.
-            </p>
-
-            <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
-                <a href="services.html"
-                    class="btn btn-gradient d-flex align-items-center justify-content-center gap-2 text-decoration-none">
-                    View Flight Services <i class="bi bi-airplane-engines"></i>
-                </a>
-                <a href="technology.html" class="btn btn-outline-custom text-decoration-none">
-                    Our Fleet
-                </a>
+            <div class="position-absolute bottom-0 mb-5 animate-bounce-slow text-gray">
+                <i class="bi bi-chevron-down fs-3" aria-hidden="true"></i>
             </div>
-        </div>
-
-        <div class="position-absolute bottom-0 mb-5 animate-bounce-slow text-gray">
-            <i class="bi bi-chevron-down fs-3"></i>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="pt-5 pb-4">
+    <footer class="pt-5 pb-4" role="contentinfo" aria-label="Site footer">
         <div class="container">
             <div class="row g-4 mb-5">
                 <div class="col-md-4">
@@ -178,9 +217,15 @@
                 <div class="col-md-4">
                     <h6 class="text-white fw-bold mb-3">Connect</h6>
                     <div class="d-flex gap-3">
-                        <a href="#" class="text-gray fs-5 hover-text-white"><i class="bi bi-instagram"></i></a>
-                        <a href="#" class="text-gray fs-5 hover-text-white"><i class="bi bi-youtube"></i></a>
-                        <a href="#" class="text-gray fs-5 hover-text-white"><i class="bi bi-linkedin"></i></a>
+                        <a href="https://instagram.com/aeronix" target="_blank" rel="noopener noreferrer"
+                            class="text-gray fs-5 social-icon social-instagram" aria-label="Follow us on Instagram"><i
+                                class="bi bi-instagram"></i></a>
+                        <a href="https://youtube.com/@aeronix" target="_blank" rel="noopener noreferrer"
+                            class="text-gray fs-5 social-icon social-youtube" aria-label="Subscribe on YouTube"><i
+                                class="bi bi-youtube"></i></a>
+                        <a href="https://linkedin.com/company/aeronix" target="_blank" rel="noopener noreferrer"
+                            class="text-gray fs-5 social-icon social-linkedin" aria-label="Connect on LinkedIn"><i
+                                class="bi bi-linkedin"></i></a>
                     </div>
                 </div>
             </div>

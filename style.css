@@ -564,3 +564,171 @@ footer {
 .legal-content li {
     margin-bottom: 0.5rem;
 }
+
+/* Contact Page Enhancements */
+.hover-text-white {
+    transition: color 0.3s ease;
+}
+
+.hover-text-white:hover {
+    color: white !important;
+}
+
+.form-control.is-valid {
+    border-color: #28a745;
+}
+
+.form-control.is-invalid {
+    border-color: #dc3545;
+}
+
+.invalid-feedback {
+    display: none;
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+.form-control.is-invalid~.invalid-feedback {
+    display: block;
+}
+
+/* Social Media Brand Colors */
+.social-icon {
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+/* Instagram - Gradient effect */
+.social-instagram:hover {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scale(1.1);
+}
+
+/* YouTube - Red */
+.social-youtube:hover {
+    color: #FF0000 !important;
+    transform: scale(1.1);
+}
+
+/* LinkedIn - Blue */
+.social-linkedin:hover {
+    color: #0077B5 !important;
+    transform: scale(1.1);
+}
+
+/* Twitter/X - Keep original hover */
+.social-twitter:hover {
+    color: #1DA1F2 !important;
+    transform: scale(1.1);
+}
+
+/* Facebook - Blue */
+.social-facebook:hover {
+    color: #1877F2 !important;
+    transform: scale(1.1);
+}
+
+/* ============================================
+   ACCESSIBILITY ENHANCEMENTS
+   ============================================ */
+
+/* Enhanced Focus Styles for Keyboard Navigation */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus,
+.btn:focus,
+.nav-link:focus,
+.dropdown-item:focus {
+    outline: 2px solid var(--autonix-cyan) !important;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.3);
+}
+
+/* Focus visible only for keyboard navigation (not mouse clicks) */
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible) {
+    outline: none;
+    box-shadow: none;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid var(--autonix-cyan) !important;
+    outline-offset: 2px;
+}
+
+/* Skip to Content Link */
+.skip-to-content {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--autonix-blue);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    z-index: 10000;
+    border-radius: 0 0 0.5rem 0;
+    transition: top 0.3s ease;
+}
+
+.skip-to-content:focus {
+    top: 0;
+    outline: 2px solid var(--autonix-cyan);
+    outline-offset: 2px;
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+
+    .btn-gradient,
+    .btn-outline-custom {
+        border-width: 2px;
+    }
+
+    .nav-link {
+        font-weight: 600;
+    }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Screen Reader Only Content */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.sr-only-focusable:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+}
