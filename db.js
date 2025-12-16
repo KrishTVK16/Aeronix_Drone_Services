@@ -9,29 +9,11 @@
  */
 export async function saveContactForm(data) {
     console.log("[DB] Saving contact form data:", data);
-    
+
     // TODO: Connect to actual backend here
     // Example: await supabase.from('leads').insert(data);
-    
+
     // Simulate network delay
     await new Promise(resolve => setTimeout(resolve, 800));
-    return true; 
-}
-
-/**
- * Logs chat interactions for analytics.
- * @param {string} userMessage 
- * @param {string} botResponse 
- */
-export async function logChatInteraction(userMessage, botResponse) {
-    const logEntry = {
-        user: userMessage,
-        bot: botResponse,
-        timestamp: new Date().toISOString()
-    };
-    
-    console.log("[DB] Logging chat interaction:", logEntry);
-    
-    // TODO: Connect to actual backend here
-    // Example: await firebase.firestore().collection('chat_logs').add(logEntry);
+    return true;
 }

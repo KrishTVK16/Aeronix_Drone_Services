@@ -1,50 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services | Aeronix</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="style.css">
-    <script type="importmap">{ "imports": { "@google/genai": "https://esm.sh/@google/genai@^1.33.0" } }</script>
+    <link rel="icon" type="image/png" href="favicon.png">
 </head>
+
 <body>
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top" id="mainNavbar">
         <div class="container-xl">
             <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="me-1">
-                    <defs>
-                        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" stop-color="#3b82f6"/>
-                            <stop offset="100%" stop-color="#38bdf8"/>
-                        </linearGradient>
-                    </defs>
-                    <path d="M16.5 16.5L21 21" stroke="url(#logoGradient)" stroke-width="2.5" stroke-linecap="round"/>
-                    <path d="M2 12C2 12 6 5 12 5C18 5 22 12 22 12C22 12 18 19 12 19C6 19 2 12 2 12Z" stroke="url(#logoGradient)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <circle cx="12" cy="12" r="4.5" stroke="url(#logoGradient)" stroke-width="1.5"/>
-                    <path d="M12 7.5C12 7.5 14 9.5 14 12C14 14.5 12 16.5 12 16.5C12 16.5 10 14.5 10 12C10 9.5 12 7.5 12 7.5Z" fill="url(#logoGradient)" fill-opacity="0.2"/>
-                    <path d="M8 12H16" stroke="url(#logoGradient)" stroke-width="1" stroke-opacity="0.6"/>
-                    <path d="M12 7.5V16.5" stroke="url(#logoGradient)" stroke-width="1" stroke-opacity="0.6"/>
-                </svg>
+                <img src="favicon.png" alt="Aeronix Logo" width="36" height="36" class="me-1">
                 <span class="fw-bold text-white ls-1">AERONIX</span>
             </a>
-            <button class="navbar-toggler border-0 shadow-none text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler border-0 shadow-none text-white" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
                 <i class="bi bi-list fs-2"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-center gap-lg-4">
+                    <!-- Home Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Home
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="homeDropdown">
+                            <li><a class="dropdown-item" href="index.html">Home 1</a></li>
+                            <li><a class="dropdown-item" href="home-2.html">Home 2</a></li>
+                        </ul>
+                    </li>
                     <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="technology.html">Fleet & Tech</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                    <li class="nav-item mt-3 mt-lg-0">
-                        <a href="contact.html" class="btn btn-gradient">Request Flight</a>
+
+                    <!-- Auth Buttons -->
+                    <li class="nav-item" id="authButtons">
+                        <div class="d-flex gap-2 align-items-center mt-3 mt-lg-0">
+                            <a href="login.html" class="btn btn-sm btn-outline-custom">Login</a>
+                            <a href="signup.html" class="btn btn-sm btn-gradient">Sign Up</a>
+                        </div>
+                    </li>
+
+                    <!-- User Menu (hidden by default) -->
+                    <li class="nav-item dropdown" id="userMenu" style="display: none;">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="bi bi-person-circle me-1"></i>
+                            <span class="user-name">User</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#" id="logoutBtn">
+                                    <i class="bi bi-box-arrow-right me-2"></i>Logout
+                                </a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Theme Toggle -->
+                    <li class="nav-item">
+                        <button id="themeToggle" class="btn btn-sm btn-outline-custom border-0 p-2">
+                            <i class="bi bi-sun-fill"></i>
+                        </button>
                     </li>
                 </ul>
             </div>
@@ -54,7 +81,8 @@
     <div class="page-header">
         <div class="container">
             <h1 class="display-4 fw-bold text-white mb-3">Aerial Solutions</h1>
-            <p class="text-gray mx-auto lead" style="max-width: 600px;">Deploying enterprise-grade UAVs to capture critical data and monitor assets.</p>
+            <p class="text-gray mx-auto lead" style="max-width: 600px;">Deploying enterprise-grade UAVs to capture
+                critical data and monitor assets.</p>
         </div>
     </div>
 
@@ -68,7 +96,8 @@
                         <div class="position-relative z-2">
                             <div class="icon-box"><i class="bi bi-map"></i></div>
                             <h4 class="text-white fw-bold mb-3">Survey & Mapping</h4>
-                            <p class="text-gray small mb-3">High-resolution orthomosaics, 3D LiDAR point clouds, and topographical maps with cm-level accuracy.</p>
+                            <p class="text-gray small mb-3">High-resolution orthomosaics, 3D LiDAR point clouds, and
+                                topographical maps with cm-level accuracy.</p>
                         </div>
                     </div>
                 </div>
@@ -78,7 +107,8 @@
                         <div class="position-relative z-2">
                             <div class="icon-box"><i class="bi bi-building-check"></i></div>
                             <h4 class="text-white fw-bold mb-3">Infrastructure Inspection</h4>
-                            <p class="text-gray small mb-3">Inspect bridges, cell towers, and wind turbines safely and rapidly using high-zoom optics.</p>
+                            <p class="text-gray small mb-3">Inspect bridges, cell towers, and wind turbines safely and
+                                rapidly using high-zoom optics.</p>
                         </div>
                     </div>
                 </div>
@@ -88,7 +118,8 @@
                         <div class="position-relative z-2">
                             <div class="icon-box"><i class="bi bi-thermometer-sun"></i></div>
                             <h4 class="text-white fw-bold mb-3">Thermal Imaging</h4>
-                            <p class="text-gray small mb-3">Detect heat leaks in solar farms or perform search and rescue operations with radiometric thermal cameras.</p>
+                            <p class="text-gray small mb-3">Detect heat leaks in solar farms or perform search and
+                                rescue operations with radiometric thermal cameras.</p>
                         </div>
                     </div>
                 </div>
@@ -98,7 +129,8 @@
                         <div class="position-relative z-2">
                             <div class="icon-box"><i class="bi bi-box-seam"></i></div>
                             <h4 class="text-white fw-bold mb-3">Drone Logistics</h4>
-                            <p class="text-gray small mb-3">Last-mile autonomous delivery for medical supplies and critical industrial parts.</p>
+                            <p class="text-gray small mb-3">Last-mile autonomous delivery for medical supplies and
+                                critical industrial parts.</p>
                         </div>
                     </div>
                 </div>
@@ -108,7 +140,8 @@
                         <div class="position-relative z-2">
                             <div class="icon-box"><i class="bi bi-flower1"></i></div>
                             <h4 class="text-white fw-bold mb-3">Precision Agriculture</h4>
-                            <p class="text-gray small mb-3">Multispectral crop analysis (NDVI) to optimize irrigation and fertilizer usage.</p>
+                            <p class="text-gray small mb-3">Multispectral crop analysis (NDVI) to optimize irrigation
+                                and fertilizer usage.</p>
                         </div>
                     </div>
                 </div>
@@ -118,7 +151,8 @@
                         <div class="position-relative z-2">
                             <div class="icon-box"><i class="bi bi-camera-reels"></i></div>
                             <h4 class="text-white fw-bold mb-3">Cinematography</h4>
-                            <p class="text-gray small mb-3">Stabilized 6K RAW aerial footage for film, real estate, and event coverage.</p>
+                            <p class="text-gray small mb-3">Stabilized 6K RAW aerial footage for film, real estate, and
+                                event coverage.</p>
                         </div>
                     </div>
                 </div>
@@ -134,7 +168,8 @@
                     <div class="d-flex align-items-center gap-2 mb-3">
                         <span class="h5 fw-bold text-white m-0 tracking-tight">AERONIX</span>
                     </div>
-                    <p class="text-gray small">Premier drone services provider for industrial, agricultural, and creative applications.</p>
+                    <p class="text-gray small">Premier drone services provider for industrial, agricultural, and
+                        creative applications.</p>
                 </div>
                 <div class="col-6 col-md-2">
                     <h6 class="text-white fw-bold mb-3">Services</h6>
@@ -161,7 +196,8 @@
                     </div>
                 </div>
             </div>
-            <div class="border-top border-secondary pt-4 d-flex flex-column flex-md-row justify-content-between align-items-center gap-3 text-muted small">
+            <div
+                class="border-top border-secondary pt-4 d-flex flex-column flex-md-row justify-content-between align-items-center gap-3 text-muted small">
                 <div>&copy; 2025 Aeronix Inc. All rights reserved.</div>
                 <div class="d-flex gap-4">
                     <a href="privacy.html" class="footer-link">Privacy Policy</a>
@@ -171,18 +207,12 @@
         </div>
     </footer>
 
-    <!-- Chat Widget -->
-    <button id="chatToggle" class="chat-widget-btn"><i class="bi bi-chat-dots-fill"></i></button>
-    <div id="chatWindow" class="chat-window">
-        <div class="chat-header">
-            <div class="d-flex align-items-center gap-2"><i class="bi bi-robot"></i><span class="fw-bold">Nexus AI</span></div>
-            <button id="closeChat" class="btn btn-link text-white p-0 text-decoration-none"><i class="bi bi-x-lg"></i></button>
-        </div>
-        <div id="chatBody" class="chat-body"><div class="message model">Greetings. I am Nexus.</div></div>
-        <form id="chatForm" class="chat-input-area"><input type="text" id="chatInput" class="chat-input" placeholder="Ask..."><button type="submit" class="btn btn-primary btn-sm rounded-circle"><i class="bi bi-send-fill"></i></button></form>
-    </div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script type="module" src="app.js"></script>
+    <script type="module" src="theme.js"></script>
+    <script type="module" src="auth.js"></script>
 </body>
+
 </html>
