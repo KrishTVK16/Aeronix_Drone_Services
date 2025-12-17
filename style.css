@@ -191,15 +191,38 @@ body {
         width: auto;
     }
 
+    /* Dropdown alignment fix in mobile */
+    .nav-item.dropdown {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .dropdown-menu {
+        position: static !important;
+        float: none;
+        width: 100%;
+        margin-top: 0.5rem;
+        text-align: right;
+    }
+
+    .dropdown-item {
+        text-align: right;
+        padding: 0.5rem 1rem;
+    }
+
     /* Auth buttons in mobile menu */
     #authButtons .d-flex {
         justify-content: flex-end !important;
         width: 100%;
+        gap: 0.5rem;
     }
 
     #authButtons .btn {
-        flex: 0 0 auto;
-        max-width: 48%;
+        flex: 1 1 0;
+        min-width: 0;
+        white-space: nowrap;
+        font-size: 0.875rem;
+        padding: 0.5rem 0.75rem;
     }
 }
 
@@ -351,6 +374,13 @@ body {
     transform: translateY(-6px);
     box-shadow: 0 0 40px rgba(56, 189, 248, 0.25);
     border-color: rgba(56, 189, 248, 0.2);
+}
+
+/* Stat hover effect */
+.stat-hover:hover {
+    transform: scale(1.1);
+    text-shadow: 0 0 20px rgba(56, 189, 248, 0.6);
+    color: var(--autonix-cyan) !important;
 }
 
 .icon-box {

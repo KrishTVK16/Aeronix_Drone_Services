@@ -43,8 +43,21 @@
                 <img src="favicon.png" alt="Aeronix Logo" width="36" height="36" class="me-1">
                 <span class="fw-bold text-white ls-1">AERONIX</span>
             </a>
-            <button class="navbar-toggler border-0 shadow-none text-white" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarNav"><i class="bi bi-list fs-2"></i></button>
+
+            <div class="d-flex align-items-center gap-2">
+                <!-- Theme Toggle - Always visible beside nav toggle -->
+                <button id="themeToggle" class="btn btn-sm btn-outline-custom border-0 p-2"
+                    style="white-space: nowrap;">
+                    <i class="bi bi-sun-fill"></i>
+                </button>
+
+                <!-- Nav Toggle Button -->
+                <button class="navbar-toggler border-0 shadow-none text-white" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation menu" style="white-space: nowrap;">
+                    <i class="bi bi-list fs-2"></i>
+                </button>
+            </div>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-center gap-lg-4">
                     <li class="nav-item dropdown">
@@ -73,10 +86,6 @@
                             <li><a class="dropdown-item" href="#" id="logoutBtn"><i
                                         class="bi bi-box-arrow-right me-2"></i>Logout</a></li>
                         </ul>
-                    </li>
-                    <li class="nav-item">
-                        <button id="themeToggle" class="btn btn-sm btn-outline-custom border-0 p-2"><i
-                                class="bi bi-sun-fill"></i></button>
                     </li>
                 </ul>
             </div>
@@ -117,7 +126,7 @@
                         <div class="col-12">
                             <div class="stat-card">
                                 <div class="stat-icon mx-auto">
-                                    <i class="bi bi-shield-check-fill"></i>
+                                    <i class="bi bi-shield-check"></i>
                                 </div>
                                 <div class="stat-number">100%</div>
                                 <div class="stat-label">Safety Record</div>
@@ -126,7 +135,7 @@
                     </div>
                 </div>
                 <!-- Mission Text -->
-                <div class="col-lg-6 order-lg-1">
+                <div class="col-lg-6 order-lg-1 text-center">
                     <div class="d-inline-flex align-items-center gap-2 badge-custom mb-3"><span
                             class="text-info text-uppercase fw-medium small tracking-wider">Our Mission</span></div>
                     <h2 class="display-5 fw-bold text-white mb-4">Elevating Perspective</h2>
@@ -187,7 +196,7 @@
     <section class="py-5">
         <div class="container py-5">
             <div class="text-center mb-5">
-                <h2 class="display-5 fw-bold text-white mb-3">Meet Our Leadership</h2>
+                <h2 class="display-5 fw-bold text-white mb-3 text-center">Meet Our Leadership</h2>
                 <p class="text-gray lead mx-auto" style="max-width: 600px;">
                     Experienced professionals leading the aerial revolution
                 </p>
@@ -247,7 +256,7 @@
         <div class="container py-5">
             <div class="row align-items-center g-5">
                 <div class="col-lg-6 text-center text-lg-start">
-                    <h2 class="display-5 fw-bold text-white mb-4" align="center">Our Story</h2>
+                    <h2 class="display-5 fw-bold text-white mb-4 text-center text-lg-start">Our Story</h2>
                     <p class="text-gray mb-4">
                         Founded in 2024 by aerospace engineers and AI researchers, Aeronix was born from a simple
                         observation: traditional inspection methods were too slow, expensive, and dangerous.

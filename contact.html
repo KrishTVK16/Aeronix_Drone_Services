@@ -43,8 +43,21 @@
                 <img src="favicon.png" alt="Aeronix Logo" width="36" height="36" class="me-1">
                 <span class="fw-bold text-white ls-1">AERONIX</span>
             </a>
-            <button class="navbar-toggler border-0 shadow-none text-white" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarNav"><i class="bi bi-list fs-2"></i></button>
+
+            <div class="d-flex align-items-center gap-2">
+                <!-- Theme Toggle - Always visible beside nav toggle -->
+                <button id="themeToggle" class="btn btn-sm btn-outline-custom border-0 p-2"
+                    style="white-space: nowrap;">
+                    <i class="bi bi-sun-fill"></i>
+                </button>
+
+                <!-- Nav Toggle Button -->
+                <button class="navbar-toggler border-0 shadow-none text-white" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation menu" style="white-space: nowrap;">
+                    <i class="bi bi-list fs-2"></i>
+                </button>
+            </div>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-center gap-lg-4">
                     <li class="nav-item dropdown">
@@ -73,10 +86,6 @@
                             <li><a class="dropdown-item" href="#" id="logoutBtn"><i
                                         class="bi bi-box-arrow-right me-2"></i>Logout</a></li>
                         </ul>
-                    </li>
-                    <li class="nav-item">
-                        <button id="themeToggle" class="btn btn-sm btn-outline-custom border-0 p-2"><i
-                                class="bi bi-sun-fill"></i></button>
                     </li>
                 </ul>
             </div>

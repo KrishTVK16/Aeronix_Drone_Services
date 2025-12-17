@@ -45,10 +45,21 @@
                 <img src="favicon.png" alt="Aeronix Logo" width="36" height="36" class="me-1">
                 <span class="fw-bold text-white ls-1">AERONIX</span>
             </a>
-            <button class="navbar-toggler border-0 shadow-none text-white" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarNav">
-                <i class="bi bi-list fs-2"></i>
-            </button>
+
+            <div class="d-flex align-items-center gap-2">
+                <!-- Theme Toggle - Always visible beside nav toggle -->
+                <button id="themeToggle" class="btn btn-sm btn-outline-custom border-0 p-2"
+                    style="white-space: nowrap;">
+                    <i class="bi bi-sun-fill"></i>
+                </button>
+
+                <!-- Nav Toggle Button -->
+                <button class="navbar-toggler border-0 shadow-none text-white" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation menu" style="white-space: nowrap;">
+                    <i class="bi bi-list fs-2"></i>
+                </button>
+            </div>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-center gap-lg-4">
                     <!-- Home Dropdown -->
@@ -87,13 +98,6 @@
                                 </a></li>
                         </ul>
                     </li>
-
-                    <!-- Theme Toggle -->
-                    <li class="nav-item">
-                        <button id="themeToggle" class="btn btn-sm btn-outline-custom border-0 p-2">
-                            <i class="bi bi-sun-fill"></i>
-                        </button>
-                    </li>
                 </ul>
             </div>
         </div>
@@ -113,10 +117,10 @@
             <div class="row g-4">
                 <!-- Service 1 -->
                 <div class="col-md-6 col-lg-4" id="aerial-mapping">
-                    <div class="service-card">
-                        <div class="position-relative z-2">
-                            <div class="icon-box"><i class="bi bi-map"></i></div>
-                            <h4 class="text-white fw-bold mb-3">Survey & Mapping</h4>
+                    <div class="service-card d-flex flex-column">
+                        <div class="position-relative z-2 flex-grow-1 d-flex flex-column">
+                            <div class="icon-box mx-auto"><i class="bi bi-map"></i></div>
+                            <h4 class="text-white fw-bold mb-3 text-center">Survey & Mapping</h4>
                             <p class="text-gray small mb-3">High-resolution orthomosaics, 3D LiDAR point clouds, and
                                 topographical maps with cm-level accuracy.</p>
                         </div>
@@ -124,10 +128,10 @@
                 </div>
                 <!-- Service 2 -->
                 <div class="col-md-6 col-lg-4" id="infrastructure-inspection">
-                    <div class="service-card">
-                        <div class="position-relative z-2">
-                            <div class="icon-box"><i class="bi bi-building-check"></i></div>
-                            <h4 class="text-white fw-bold mb-3">Infrastructure Inspection</h4>
+                    <div class="service-card d-flex flex-column">
+                        <div class="position-relative z-2 flex-grow-1 d-flex flex-column">
+                            <div class="icon-box mx-auto"><i class="bi bi-building-check"></i></div>
+                            <h4 class="text-white fw-bold mb-3 text-center">Infrastructure Inspection</h4>
                             <p class="text-gray small mb-3">Inspect bridges, cell towers, and wind turbines safely and
                                 rapidly using high-zoom optics.</p>
                         </div>
@@ -135,10 +139,10 @@
                 </div>
                 <!-- Service 3 -->
                 <div class="col-md-6 col-lg-4" id="thermal-imaging">
-                    <div class="service-card">
-                        <div class="position-relative z-2">
-                            <div class="icon-box"><i class="bi bi-thermometer-sun"></i></div>
-                            <h4 class="text-white fw-bold mb-3">Thermal Imaging</h4>
+                    <div class="service-card d-flex flex-column">
+                        <div class="position-relative z-2 flex-grow-1 d-flex flex-column">
+                            <div class="icon-box mx-auto"><i class="bi bi-thermometer-sun"></i></div>
+                            <h4 class="text-white fw-bold mb-3 text-center">Thermal Imaging</h4>
                             <p class="text-gray small mb-3">Detect heat leaks in solar farms or perform search and
                                 rescue operations with radiometric thermal cameras.</p>
                         </div>
@@ -146,10 +150,10 @@
                 </div>
                 <!-- Service 4 -->
                 <div class="col-md-6 col-lg-4" id="drone-delivery">
-                    <div class="service-card">
-                        <div class="position-relative z-2">
-                            <div class="icon-box"><i class="bi bi-box-seam"></i></div>
-                            <h4 class="text-white fw-bold mb-3">Drone Logistics</h4>
+                    <div class="service-card d-flex flex-column">
+                        <div class="position-relative z-2 flex-grow-1 d-flex flex-column">
+                            <div class="icon-box mx-auto"><i class="bi bi-box-seam"></i></div>
+                            <h4 class="text-white fw-bold mb-3 text-center">Drone Logistics</h4>
                             <p class="text-gray small mb-3">Last-mile autonomous delivery for medical supplies and
                                 critical industrial parts.</p>
                         </div>
@@ -157,10 +161,10 @@
                 </div>
                 <!-- Service 5 -->
                 <div class="col-md-6 col-lg-4" id="precision-agriculture">
-                    <div class="service-card">
-                        <div class="position-relative z-2">
-                            <div class="icon-box"><i class="bi bi-flower1"></i></div>
-                            <h4 class="text-white fw-bold mb-3">Precision Agriculture</h4>
+                    <div class="service-card d-flex flex-column">
+                        <div class="position-relative z-2 flex-grow-1 d-flex flex-column">
+                            <div class="icon-box mx-auto"><i class="bi bi-flower1"></i></div>
+                            <h4 class="text-white fw-bold mb-3 text-center">Precision Agriculture</h4>
                             <p class="text-gray small mb-3">Multispectral crop analysis (NDVI) to optimize irrigation
                                 and fertilizer usage.</p>
                         </div>
@@ -168,10 +172,10 @@
                 </div>
                 <!-- Service 6 -->
                 <div class="col-md-6 col-lg-4" id="cinematography">
-                    <div class="service-card">
-                        <div class="position-relative z-2">
-                            <div class="icon-box"><i class="bi bi-camera-reels"></i></div>
-                            <h4 class="text-white fw-bold mb-3">Cinematography</h4>
+                    <div class="service-card d-flex flex-column">
+                        <div class="position-relative z-2 flex-grow-1 d-flex flex-column">
+                            <div class="icon-box mx-auto"><i class="bi bi-camera-reels"></i></div>
+                            <h4 class="text-white fw-bold mb-3 text-center">Cinematography</h4>
                             <p class="text-gray small mb-3">Stabilized 6K RAW aerial footage for film, real estate, and
                                 event coverage.</p>
                         </div>
@@ -193,7 +197,7 @@
 
             <div class="row g-4">
                 <div class="col-lg-4">
-                    <div class="service-card h-100">
+                    <div class="service-card h-100 d-flex flex-column">
                         <div class="text-center mb-4">
                             <h5 class="text-white fw-bold mb-2">Starter</h5>
                             <div class="mb-3">
@@ -202,77 +206,74 @@
                             </div>
                             <p class="text-gray small">Perfect for small-scale operations</p>
                         </div>
-                        <ul class="list-unstyled">
-                            <li class="mb-3 d-flex align-items-start">
+                        <ul class="list-unstyled flex-grow-1">
+                            <li class="mb-3 d-flex align-items-start justify-content-md-center justify-content-lg-start">
                                 <i class="bi bi-check-circle-fill text-cyan me-2 mt-1"></i>
                                 <span class="text-gray small">Up to 50 acres coverage</span>
                             </li>
-                            <li class="mb-3 d-flex align-items-start">
+                            <li class="mb-3 d-flex align-items-start justify-content-md-center justify-content-lg-start">
                                 <i class="bi bi-check-circle-fill text-cyan me-2 mt-1"></i>
                                 <span class="text-gray small">Basic orthomosaic maps</span>
                             </li>
-                            <li class="mb-3 d-flex align-items-start">
+                            <li class="mb-3 d-flex align-items-start justify-content-md-center justify-content-lg-start">
                                 <i class="bi bi-check-circle-fill text-cyan me-2 mt-1"></i>
                                 <span class="text-gray small">48-hour delivery</span>
                             </li>
-                            <li class="mb-3 d-flex align-items-start">
+                            <li class="mb-3 d-flex align-items-start justify-content-md-center justify-content-lg-start">
                                 <i class="bi bi-check-circle-fill text-cyan me-2 mt-1"></i>
                                 <span class="text-gray small">RGB imagery only</span>
                             </li>
-                            <li class="mb-3 d-flex align-items-start">
+                            <li class="mb-3 d-flex align-items-start justify-content-md-center justify-content-lg-start">
                                 <i class="bi bi-check-circle-fill text-cyan me-2 mt-1"></i>
                                 <span class="text-gray small">Email support</span>
                             </li>
                         </ul>
-                        <a href="contact.html" class="btn btn-outline-custom w-100 mt-4">Get Started</a>
+                        <a href="contact.html" class="btn btn-outline-custom w-100 mt-auto">Get Started</a>
                     </div>
                 </div>
 
                 <div class="col-lg-4">
-                    <div class="service-card h-100 border-cyan position-relative">
-                        <div class="position-absolute top-0 start-50 translate-middle">
-                            <span class="badge bg-cyan text-dark px-3 py-2">MOST POPULAR</span>
-                        </div>
-                        <div class="text-center mb-4 mt-3">
-                            <h5 class="text-white fw-bold mb-2">Professional</h5>
+                    <div class="service-card h-100 border-cyan position-relative d-flex flex-column">
+                        <div class="text-center mb-4">
+                            <h5 class="text-white fw-bold mb-2">Professional<span class="text-warning ms-1">*</span></h5>
                             <div class="mb-3">
                                 <span class="display-5 fw-bold text-cyan">$3,500</span>
                                 <span class="text-gray">/project</span>
                             </div>
                             <p class="text-gray small">Ideal for commercial projects</p>
                         </div>
-                        <ul class="list-unstyled">
-                            <li class="mb-3 d-flex align-items-start">
+                        <ul class="list-unstyled flex-grow-1">
+                            <li class="mb-3 d-flex align-items-start justify-content-md-center justify-content-lg-start">
                                 <i class="bi bi-check-circle-fill text-cyan me-2 mt-1"></i>
                                 <span class="text-gray small">Up to 200 acres coverage</span>
                             </li>
-                            <li class="mb-3 d-flex align-items-start">
+                            <li class="mb-3 d-flex align-items-start justify-content-md-center justify-content-lg-start">
                                 <i class="bi bi-check-circle-fill text-cyan me-2 mt-1"></i>
                                 <span class="text-gray small">3D models & point clouds</span>
                             </li>
-                            <li class="mb-3 d-flex align-items-start">
+                            <li class="mb-3 d-flex align-items-start justify-content-md-center justify-content-lg-start">
                                 <i class="bi bi-check-circle-fill text-cyan me-2 mt-1"></i>
                                 <span class="text-gray small">24-hour delivery</span>
                             </li>
-                            <li class="mb-3 d-flex align-items-start">
+                            <li class="mb-3 d-flex align-items-start justify-content-md-center justify-content-lg-start">
                                 <i class="bi bi-check-circle-fill text-cyan me-2 mt-1"></i>
                                 <span class="text-gray small">Thermal + RGB imagery</span>
                             </li>
-                            <li class="mb-3 d-flex align-items-start">
+                            <li class="mb-3 d-flex align-items-start justify-content-md-center justify-content-lg-start">
                                 <i class="bi bi-check-circle-fill text-cyan me-2 mt-1"></i>
                                 <span class="text-gray small">Priority phone support</span>
                             </li>
-                            <li class="mb-3 d-flex align-items-start">
+                            <li class="mb-3 d-flex align-items-start justify-content-md-center justify-content-lg-start">
                                 <i class="bi bi-check-circle-fill text-cyan me-2 mt-1"></i>
                                 <span class="text-gray small">Flight planning consultation</span>
                             </li>
                         </ul>
-                        <a href="contact.html" class="btn btn-gradient w-100 mt-4">Get Started</a>
+                        <a href="contact.html" class="btn btn-gradient w-100 mt-auto">Get Started</a>
                     </div>
                 </div>
 
                 <div class="col-lg-4">
-                    <div class="service-card h-100">
+                    <div class="service-card h-100 d-flex flex-column">
                         <div class="text-center mb-4">
                             <h5 class="text-white fw-bold mb-2">Enterprise</h5>
                             <div class="mb-3">
@@ -280,37 +281,37 @@
                             </div>
                             <p class="text-gray small">For large-scale deployments</p>
                         </div>
-                        <ul class="list-unstyled">
-                            <li class="mb-3 d-flex align-items-start">
+                        <ul class="list-unstyled flex-grow-1">
+                            <li class="mb-3 d-flex align-items-start justify-content-md-center justify-content-lg-start">
                                 <i class="bi bi-check-circle-fill text-cyan me-2 mt-1"></i>
                                 <span class="text-gray small">Unlimited coverage</span>
                             </li>
-                            <li class="mb-3 d-flex align-items-start">
+                            <li class="mb-3 d-flex align-items-start justify-content-md-center justify-content-lg-start">
                                 <i class="bi bi-check-circle-fill text-cyan me-2 mt-1"></i>
                                 <span class="text-gray small">LiDAR + Multispectral</span>
                             </li>
-                            <li class="mb-3 d-flex align-items-start">
+                            <li class="mb-3 d-flex align-items-start justify-content-md-center justify-content-lg-start">
                                 <i class="bi bi-check-circle-fill text-cyan me-2 mt-1"></i>
                                 <span class="text-gray small">Same-day delivery option</span>
                             </li>
-                            <li class="mb-3 d-flex align-items-start">
+                            <li class="mb-3 d-flex align-items-start justify-content-md-center justify-content-lg-start">
                                 <i class="bi bi-check-circle-fill text-cyan me-2 mt-1"></i>
                                 <span class="text-gray small">All sensor types included</span>
                             </li>
-                            <li class="mb-3 d-flex align-items-start">
+                            <li class="mb-3 d-flex align-items-start justify-content-md-center justify-content-lg-start">
                                 <i class="bi bi-check-circle-fill text-cyan me-2 mt-1"></i>
                                 <span class="text-gray small">24/7 dedicated support</span>
                             </li>
-                            <li class="mb-3 d-flex align-items-start">
+                            <li class="mb-3 d-flex align-items-start justify-content-md-center justify-content-lg-start">
                                 <i class="bi bi-check-circle-fill text-cyan me-2 mt-1"></i>
                                 <span class="text-gray small">Custom API integration</span>
                             </li>
-                            <li class="mb-3 d-flex align-items-start">
+                            <li class="mb-3 d-flex align-items-start justify-content-md-center justify-content-lg-start">
                                 <i class="bi bi-check-circle-fill text-cyan me-2 mt-1"></i>
                                 <span class="text-gray small">Recurring service discounts</span>
                             </li>
                         </ul>
-                        <a href="contact.html" class="btn btn-outline-custom w-100 mt-4">Contact Sales</a>
+                        <a href="contact.html" class="btn btn-outline-custom w-100 mt-auto">Contact Sales</a>
                     </div>
                 </div>
             </div>
@@ -379,43 +380,27 @@
             <div class="row g-4 align-items-center">
                 <div class="col-lg-6">
                     <div class="service-card">
-                        <h4 class="text-white fw-bold mb-3">Midwest Solar Farm Optimization</h4>
-                        <p class="text-gray mb-4">
-                            A 500-acre solar energy facility in Iowa was experiencing unexplained power output losses.
-                            Using our thermal imaging and AI analysis services, we identified 127 faulty panels across
-                            the farm that were causing hotspots and reducing overall efficiency by 8.3%.
-                        </p>
-                        <div class="row g-3 mb-4">
-                            <div class="col-6">
-                                <div class="border-start border-cyan border-3 ps-3">
-                                    <div class="text-cyan fw-bold h4 mb-1">$285K</div>
-                                    <small class="text-gray">Annual Savings</small>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="border-start border-cyan border-3 ps-3">
-                                    <div class="text-cyan fw-bold h4 mb-1">4 Hours</div>
-                                    <small class="text-gray">Inspection Time</small>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="border-start border-cyan border-3 ps-3">
-                                    <div class="text-cyan fw-bold h4 mb-1">127</div>
-                                    <small class="text-gray">Issues Detected</small>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="border-start border-cyan border-3 ps-3">
-                                    <div class="text-cyan fw-bold h4 mb-1">98.7%</div>
-                                    <small class="text-gray">New Efficiency</small>
-                                </div>
-                            </div>
+                        <div class="text-center mb-3">
+                            <h4 class="text-white fw-bold mb-2">Midwest Solar Farm Optimization</h4>
+                            <p class="text-gray mb-0">
+                                A 500-acre solar energy facility in Iowa was experiencing unexplained power output losses.
+                                Using our thermal imaging and AI analysis services, we identified 127 faulty panels across
+                                the farm that were causing hotspots and reducing overall efficiency by 8.3%.
+                            </p>
                         </div>
-                        <blockquote class="border-start border-cyan border-3 ps-3 mb-0">
-                            <p class="text-gray fst-italic mb-2">"Aeronix identified problems in hours that would have
-                                taken our ground team weeks to find. The ROI was immediate."</p>
-                            <footer class="text-gray small">— David Chen, Operations Manager, MidAmerica Solar</footer>
-                        </blockquote>
+                        
+                        
+                        <!-- Testimonial Section -->
+                        <div class="border-top border-secondary pt-3">
+                            <blockquote class="text-center mb-0">
+                                <p class="text-gray fst-italic mb-2">"Aeronix identified problems in hours that would have
+                                    taken our ground team weeks to find. The ROI was immediate."</p>
+                                <footer class="text-gray small">
+                                    <strong class="text-white">David Chen</strong><br>
+                                    Operations Manager, MidAmerica Solar
+                                </footer>
+                            </blockquote>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -474,13 +459,13 @@
     <section class="py-5">
         <div class="container py-5">
             <div class="row align-items-center g-4">
-                <div class="col-lg-8">
+                <div class="col-lg-8 text-center text-lg-start">
                     <h2 class="display-6 fw-bold text-white mb-3">Ready to Elevate Your Project?</h2>
                     <p class="text-gray lead mb-0">
                         Schedule a free consultation to discuss your specific needs and get a custom quote.
                     </p>
                 </div>
-                <div class="col-lg-4 text-lg-end">
+                <div class="col-lg-4 text-lg-end text-center">
                     <a href="contact.html" class="btn btn-gradient btn-lg">
                         Request Quote <i class="bi bi-arrow-right ms-2"></i>
                     </a>
