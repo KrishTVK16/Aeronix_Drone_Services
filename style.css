@@ -160,6 +160,7 @@ body {
         right: 0;
         width: 45%;
         min-width: 240px;
+        max-width: 320px;
         margin-right: 0.75rem;
         background: rgba(11, 15, 20, 0.98);
         backdrop-filter: blur(16px);
@@ -169,6 +170,7 @@ body {
         margin-top: 0.5rem;
         box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
         z-index: 1000;
+        overflow-x: hidden;
     }
 
     .navbar-nav.align-items-center {
@@ -189,9 +191,15 @@ body {
         width: auto;
     }
 
-    .navbar-nav .btn-gradient {
-        margin-top: 0.5rem;
+    /* Auth buttons in mobile menu */
+    #authButtons .d-flex {
+        justify-content: flex-end !important;
         width: 100%;
+    }
+
+    #authButtons .btn {
+        flex: 0 0 auto;
+        max-width: 48%;
     }
 }
 
@@ -205,6 +213,7 @@ body {
     font-weight: 600;
     box-shadow: 0 0 30px rgba(56, 189, 248, 0.35);
     transition: all 0.3s ease;
+    text-align: center;
 }
 
 .btn-gradient:hover {
@@ -331,7 +340,7 @@ body {
     background: rgba(255, 255, 255, 0.04);
     border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 18px;
-    padding: 2rem;
+    padding: 0.9rem;
     height: 100%;
     transition: all 0.4s ease;
     position: relative;
@@ -574,6 +583,208 @@ footer {
     color: white !important;
 }
 
+/* Contact Form Container with Glassmorphism */
+.contact-form-container {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 3rem;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s ease;
+}
+
+.contact-form-container:hover {
+    border-color: rgba(56, 189, 248, 0.2);
+    box-shadow: 0 12px 40px rgba(56, 189, 248, 0.15);
+}
+
+/* Enhanced Form Input Effects */
+.form-control {
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 12px;
+    padding: 0.9rem 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.form-control:hover {
+    border-color: rgba(56, 189, 248, 0.3) !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+}
+
+.form-control:focus {
+    background: rgba(255, 255, 255, 0.06) !important;
+    border-color: var(--autonix-cyan) !important;
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.25), 0 0 0 3px rgba(56, 189, 248, 0.1) !important;
+    transform: translateY(-2px);
+}
+
+/* Info Cards */
+.info-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    padding: 2rem 1.5rem;
+    transition: all 0.35s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.info-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--autonix-blue), var(--autonix-cyan));
+    transform: scaleX(0);
+    transition: transform 0.35s ease;
+}
+
+.info-card:hover::before {
+    transform: scaleX(1);
+}
+
+.info-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(56, 189, 248, 0.3);
+    box-shadow: 0 12px 30px rgba(56, 189, 248, 0.2);
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.info-card .info-icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(59, 130, 246, 0.15);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: var(--autonix-cyan);
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.info-card:hover .info-icon {
+    background: rgba(59, 130, 246, 0.25);
+    box-shadow: 0 0 25px rgba(56, 189, 248, 0.4);
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Stat Cards for About Page */
+.stat-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    padding: 2.5rem 2rem;
+    transition: all 0.35s ease;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--autonix-blue), var(--autonix-cyan));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.stat-card:hover::before {
+    transform: scaleX(1);
+}
+
+.stat-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    border-color: rgba(56, 189, 248, 0.3);
+    box-shadow: 0 15px 40px rgba(56, 189, 248, 0.25);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.stat-icon {
+    width: 70px;
+    height: 70px;
+    background: rgba(59, 130, 246, 0.15);
+    border-radius: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--autonix-cyan);
+    margin-bottom: 1.5rem;
+    transition: all 0.35s ease;
+}
+
+.stat-card:hover .stat-icon {
+    background: rgba(59, 130, 246, 0.3);
+    box-shadow: 0 0 30px rgba(56, 189, 248, 0.5);
+    transform: scale(1.15) rotate(360deg);
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--autonix-blue-soft), var(--autonix-cyan));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.stat-label {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Contact Info Cards - Simpler Style */
+.info-card-simple {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 2rem 1.5rem;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.info-card-simple:hover {
+    transform: translateY(-6px);
+    border-color: rgba(56, 189, 248, 0.25);
+    box-shadow: 0 10px 25px rgba(56, 189, 248, 0.15);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.info-icon-simple {
+    width: 56px;
+    height: 56px;
+    background: rgba(59, 130, 246, 0.12);
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--autonix-cyan);
+    transition: all 0.3s ease;
+}
+
+.info-card-simple:hover .info-icon-simple {
+    background: rgba(59, 130, 246, 0.2);
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
+    transform: scale(1.08);
+}
+
 .form-control.is-valid {
     border-color: #28a745;
 }
@@ -731,4 +942,355 @@ textarea:focus-visible {
     overflow: visible;
     clip: auto;
     white-space: normal;
+}
+
+/* ============================================
+   DRONE-THEMED ANIMATIONS (OPTIMIZED)
+   ============================================ */
+
+/* Page Load Animation - Faster */
+body {
+    animation: pageLoad 0.3s ease-out;
+}
+
+@keyframes pageLoad {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Scroll Animation Classes - Much Faster */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Enhanced Card Hover - Snappier Response */
+.service-card {
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-card:hover {
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: 0 15px 40px rgba(56, 189, 248, 0.25),
+        0 0 0 1px rgba(56, 189, 248, 0.1);
+}
+
+/* Icon Rotation on Hover - Faster Spin */
+.service-card:hover .icon-box {
+    transform: rotate(360deg);
+    transition: transform 0.5s ease-in-out;
+}
+
+.icon-box {
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Stats Counter Animation */
+.stat-number {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.stat-number.counting {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.4s ease-out;
+}
+
+/* Drone Flight Path Animation */
+@keyframes droneFly {
+    0% {
+        transform: translate(-100px, 50px) rotate(-10deg);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(calc(100vw + 100px), -50px) rotate(10deg);
+        opacity: 0;
+    }
+}
+
+.drone-flyby {
+    position: fixed;
+    top: 20%;
+    left: -100px;
+    font-size: 3rem;
+    color: var(--autonix-cyan);
+    animation: droneFly 8s ease-in-out;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+/* Propeller Spin Animation */
+@keyframes propellerSpin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.propeller-spin {
+    animation: propellerSpin 0.3s linear infinite;
+}
+
+/* Staggered Fade In - Faster */
+.stagger-item {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.stagger-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.stagger-item:nth-child(1) {
+    transition: all 0.3s ease-out 0.05s;
+}
+
+.stagger-item:nth-child(2) {
+    transition: all 0.3s ease-out 0.1s;
+}
+
+.stagger-item:nth-child(3) {
+    transition: all 0.3s ease-out 0.15s;
+}
+
+.stagger-item:nth-child(4) {
+    transition: all 0.3s ease-out 0.2s;
+}
+
+.stagger-item:nth-child(5) {
+    transition: all 0.3s ease-out 0.25s;
+}
+
+.stagger-item:nth-child(6) {
+    transition: all 0.3s ease-out 0.3s;
+}
+
+/* Button Press Effect */
+.btn-gradient,
+.btn-outline-custom {
+    transition: all 0.15s ease;
+}
+
+.btn-gradient:active,
+.btn-outline-custom:active {
+    transform: scale(0.96);
+}
+
+/* Smooth Navbar Slide Down - Faster */
+.navbar {
+    animation: navSlideDown 0.3s ease-out;
+}
+
+@keyframes navSlideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* ============================================
+   FLYING SYMBOLS ANIMATION
+   ============================================ */
+
+/* Container for flying symbols */
+.flying-symbol {
+    position: fixed;
+    font-size: 2rem;
+    opacity: 0.15;
+    pointer-events: none;
+    z-index: 1;
+    filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.3));
+}
+
+/* Left to Right Animation */
+@keyframes flyLeftToRight {
+    0% {
+        left: -100px;
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(5deg);
+    }
+
+    100% {
+        left: calc(100% + 100px);
+        transform: rotate(0deg);
+    }
+}
+
+/* Right to Left Animation */
+@keyframes flyRightToLeft {
+    0% {
+        right: -100px;
+        transform: rotate(0deg) scaleX(-1);
+    }
+
+    50% {
+        transform: rotate(-5deg) scaleX(-1);
+    }
+
+    100% {
+        right: calc(100% + 100px);
+        transform: rotate(0deg) scaleX(-1);
+    }
+}
+
+
+/* Apply animations */
+.fly-left-to-right {
+    animation: flyLeftToRight linear forwards;
+}
+
+.fly-right-to-left {
+    animation: flyRightToLeft linear forwards;
+}
+
+/* Helicopter-specific animations (helicopter naturally faces LEFT) */
+@keyframes heliLeftToRight {
+    0% {
+        left: -100px;
+        transform: rotate(0deg) scaleX(-1);
+    }
+
+    50% {
+        transform: rotate(5deg) scaleX(-1);
+    }
+
+    100% {
+        left: calc(100% + 100px);
+        transform: rotate(0deg) scaleX(-1);
+    }
+}
+
+@keyframes heliRightToLeft {
+    0% {
+        right: -100px;
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(-5deg);
+    }
+
+    100% {
+        right: calc(100% + 100px);
+        transform: rotate(0deg);
+    }
+}
+
+.heli-left-to-right {
+    animation: heliLeftToRight linear forwards;
+}
+
+.heli-right-to-left {
+    animation: heliRightToLeft linear forwards;
+}
+
+/* Diagonal Corner Animations */
+/* Top-Left to Bottom-Right */
+@keyframes flyTopLeftToBottomRight {
+    0% {
+        top: -100px;
+        left: -100px;
+        transform: rotate(45deg) translate(0, 0);
+    }
+
+    100% {
+        top: -100px;
+        left: -100px;
+        transform: rotate(45deg) translate(calc(100vw + 200px), calc(100vh + 200px));
+    }
+}
+
+/* Top-Right to Bottom-Left */
+@keyframes flyTopRightToBottomLeft {
+    0% {
+        top: -100px;
+        right: -100px;
+        transform: rotate(-45deg) scaleX(-1);
+    }
+
+    100% {
+        top: calc(100% + 100px);
+        right: calc(100% + 100px);
+        transform: rotate(-45deg) scaleX(-1);
+    }
+}
+
+/* Bottom-Left to Top-Right */
+@keyframes flyBottomLeftToTopRight {
+    0% {
+        bottom: -100px;
+        left: -100px;
+        transform: rotate(-45deg);
+    }
+
+    100% {
+        bottom: calc(100% + 100px);
+        left: calc(100% + 100px);
+        transform: rotate(-45deg);
+    }
+}
+
+/* Bottom-Right to Top-Left */
+@keyframes flyBottomRightToTopLeft {
+    0% {
+        bottom: -100px;
+        right: -100px;
+        transform: rotate(45deg) scaleX(-1);
+    }
+
+    100% {
+        bottom: calc(100% + 100px);
+        right: calc(100% + 100px);
+        transform: rotate(45deg) scaleX(-1);
+    }
+}
+
+/* Apply diagonal animations */
+.fly-diagonal-tl-br {
+    animation: flyTopLeftToBottomRight linear forwards;
+}
+
+.fly-diagonal-tr-bl {
+    animation: flyTopRightToBottomLeft linear forwards;
+}
+
+.fly-diagonal-bl-tr {
+    animation: flyBottomLeftToTopRight linear forwards;
+}
+
+.fly-diagonal-br-tl {
+    animation: flyBottomRightToTopLeft linear forwards;
 }

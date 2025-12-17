@@ -58,8 +58,8 @@
                             Home
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="homeDropdown">
-                            <li><a class="dropdown-item" href="index.html">Home 1</a></li>
-                            <li><a class="dropdown-item" href="home-2.html">Home 2</a></li>
+                            <li><a class="dropdown-item" href="index.html">Home - Classic</a></li>
+                            <li><a class="dropdown-item" href="home-2.html">Home - Platform</a></li>
                         </ul>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
@@ -112,7 +112,7 @@
         <div class="container pb-5">
             <div class="row g-4">
                 <!-- Service 1 -->
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4" id="aerial-mapping">
                     <div class="service-card">
                         <div class="position-relative z-2">
                             <div class="icon-box"><i class="bi bi-map"></i></div>
@@ -123,7 +123,7 @@
                     </div>
                 </div>
                 <!-- Service 2 -->
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4" id="infrastructure-inspection">
                     <div class="service-card">
                         <div class="position-relative z-2">
                             <div class="icon-box"><i class="bi bi-building-check"></i></div>
@@ -134,7 +134,7 @@
                     </div>
                 </div>
                 <!-- Service 3 -->
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4" id="thermal-imaging">
                     <div class="service-card">
                         <div class="position-relative z-2">
                             <div class="icon-box"><i class="bi bi-thermometer-sun"></i></div>
@@ -145,7 +145,7 @@
                     </div>
                 </div>
                 <!-- Service 4 -->
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4" id="drone-delivery">
                     <div class="service-card">
                         <div class="position-relative z-2">
                             <div class="icon-box"><i class="bi bi-box-seam"></i></div>
@@ -156,7 +156,7 @@
                     </div>
                 </div>
                 <!-- Service 5 -->
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4" id="precision-agriculture">
                     <div class="service-card">
                         <div class="position-relative z-2">
                             <div class="icon-box"><i class="bi bi-flower1"></i></div>
@@ -167,7 +167,7 @@
                     </div>
                 </div>
                 <!-- Service 6 -->
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4" id="cinematography">
                     <div class="service-card">
                         <div class="position-relative z-2">
                             <div class="icon-box"><i class="bi bi-camera-reels"></i></div>
@@ -181,23 +181,333 @@
         </div>
     </section>
 
+    <!-- Pricing Section -->
+    <section class="py-5 section-bg-gradient">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold text-white mb-3">Service Packages</h2>
+                <p class="text-gray lead mx-auto" style="max-width: 600px;">
+                    Flexible pricing to match your project requirements
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="service-card h-100">
+                        <div class="text-center mb-4">
+                            <h5 class="text-white fw-bold mb-2">Starter</h5>
+                            <div class="mb-3">
+                                <span class="display-5 fw-bold text-cyan">$1,200</span>
+                                <span class="text-gray">/project</span>
+                            </div>
+                            <p class="text-gray small">Perfect for small-scale operations</p>
+                        </div>
+                        <ul class="list-unstyled">
+                            <li class="mb-3 d-flex align-items-start">
+                                <i class="bi bi-check-circle-fill text-cyan me-2 mt-1"></i>
+                                <span class="text-gray small">Up to 50 acres coverage</span>
+                            </li>
+                            <li class="mb-3 d-flex align-items-start">
+                                <i class="bi bi-check-circle-fill text-cyan me-2 mt-1"></i>
+                                <span class="text-gray small">Basic orthomosaic maps</span>
+                            </li>
+                            <li class="mb-3 d-flex align-items-start">
+                                <i class="bi bi-check-circle-fill text-cyan me-2 mt-1"></i>
+                                <span class="text-gray small">48-hour delivery</span>
+                            </li>
+                            <li class="mb-3 d-flex align-items-start">
+                                <i class="bi bi-check-circle-fill text-cyan me-2 mt-1"></i>
+                                <span class="text-gray small">RGB imagery only</span>
+                            </li>
+                            <li class="mb-3 d-flex align-items-start">
+                                <i class="bi bi-check-circle-fill text-cyan me-2 mt-1"></i>
+                                <span class="text-gray small">Email support</span>
+                            </li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-outline-custom w-100 mt-4">Get Started</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="service-card h-100 border-cyan position-relative">
+                        <div class="position-absolute top-0 start-50 translate-middle">
+                            <span class="badge bg-cyan text-dark px-3 py-2">MOST POPULAR</span>
+                        </div>
+                        <div class="text-center mb-4 mt-3">
+                            <h5 class="text-white fw-bold mb-2">Professional</h5>
+                            <div class="mb-3">
+                                <span class="display-5 fw-bold text-cyan">$3,500</span>
+                                <span class="text-gray">/project</span>
+                            </div>
+                            <p class="text-gray small">Ideal for commercial projects</p>
+                        </div>
+                        <ul class="list-unstyled">
+                            <li class="mb-3 d-flex align-items-start">
+                                <i class="bi bi-check-circle-fill text-cyan me-2 mt-1"></i>
+                                <span class="text-gray small">Up to 200 acres coverage</span>
+                            </li>
+                            <li class="mb-3 d-flex align-items-start">
+                                <i class="bi bi-check-circle-fill text-cyan me-2 mt-1"></i>
+                                <span class="text-gray small">3D models & point clouds</span>
+                            </li>
+                            <li class="mb-3 d-flex align-items-start">
+                                <i class="bi bi-check-circle-fill text-cyan me-2 mt-1"></i>
+                                <span class="text-gray small">24-hour delivery</span>
+                            </li>
+                            <li class="mb-3 d-flex align-items-start">
+                                <i class="bi bi-check-circle-fill text-cyan me-2 mt-1"></i>
+                                <span class="text-gray small">Thermal + RGB imagery</span>
+                            </li>
+                            <li class="mb-3 d-flex align-items-start">
+                                <i class="bi bi-check-circle-fill text-cyan me-2 mt-1"></i>
+                                <span class="text-gray small">Priority phone support</span>
+                            </li>
+                            <li class="mb-3 d-flex align-items-start">
+                                <i class="bi bi-check-circle-fill text-cyan me-2 mt-1"></i>
+                                <span class="text-gray small">Flight planning consultation</span>
+                            </li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-gradient w-100 mt-4">Get Started</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="service-card h-100">
+                        <div class="text-center mb-4">
+                            <h5 class="text-white fw-bold mb-2">Enterprise</h5>
+                            <div class="mb-3">
+                                <span class="display-5 fw-bold text-cyan">Custom</span>
+                            </div>
+                            <p class="text-gray small">For large-scale deployments</p>
+                        </div>
+                        <ul class="list-unstyled">
+                            <li class="mb-3 d-flex align-items-start">
+                                <i class="bi bi-check-circle-fill text-cyan me-2 mt-1"></i>
+                                <span class="text-gray small">Unlimited coverage</span>
+                            </li>
+                            <li class="mb-3 d-flex align-items-start">
+                                <i class="bi bi-check-circle-fill text-cyan me-2 mt-1"></i>
+                                <span class="text-gray small">LiDAR + Multispectral</span>
+                            </li>
+                            <li class="mb-3 d-flex align-items-start">
+                                <i class="bi bi-check-circle-fill text-cyan me-2 mt-1"></i>
+                                <span class="text-gray small">Same-day delivery option</span>
+                            </li>
+                            <li class="mb-3 d-flex align-items-start">
+                                <i class="bi bi-check-circle-fill text-cyan me-2 mt-1"></i>
+                                <span class="text-gray small">All sensor types included</span>
+                            </li>
+                            <li class="mb-3 d-flex align-items-start">
+                                <i class="bi bi-check-circle-fill text-cyan me-2 mt-1"></i>
+                                <span class="text-gray small">24/7 dedicated support</span>
+                            </li>
+                            <li class="mb-3 d-flex align-items-start">
+                                <i class="bi bi-check-circle-fill text-cyan me-2 mt-1"></i>
+                                <span class="text-gray small">Custom API integration</span>
+                            </li>
+                            <li class="mb-3 d-flex align-items-start">
+                                <i class="bi bi-check-circle-fill text-cyan me-2 mt-1"></i>
+                                <span class="text-gray small">Recurring service discounts</span>
+                            </li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-outline-custom w-100 mt-4">Contact Sales</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Benefits -->
+    <section class="py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold text-white mb-3">Why Choose Our Services?</h2>
+                <p class="text-gray lead mx-auto" style="max-width: 600px;">
+                    Comprehensive solutions backed by advanced technology
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="text-center">
+                        <div class="icon-box mx-auto mb-3">
+                            <i class="bi bi-lightning-charge"></i>
+                        </div>
+                        <h6 class="text-white fw-bold mb-2">Fast Turnaround</h6>
+                        <p class="text-gray small">Get data processed and delivered within 24-48 hours</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="text-center">
+                        <div class="icon-box mx-auto mb-3">
+                            <i class="bi bi-rulers"></i>
+                        </div>
+                        <h6 class="text-white fw-bold mb-2">Precision Accuracy</h6>
+                        <p class="text-gray small">Centimeter-level positioning with RTK/PPK technology</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="text-center">
+                        <div class="icon-box mx-auto mb-3">
+                            <i class="bi bi-cloud-arrow-up"></i>
+                        </div>
+                        <h6 class="text-white fw-bold mb-2">Cloud Platform</h6>
+                        <p class="text-gray small">Access your project data anytime, anywhere</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="text-center">
+                        <div class="icon-box mx-auto mb-3">
+                            <i class="bi bi-file-earmark-arrow-down"></i>
+                        </div>
+                        <h6 class="text-white fw-bold mb-2">Multiple Formats</h6>
+                        <p class="text-gray small">Export to CAD, GIS, PDF, or custom formats</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study -->
+    <section class="py-5 section-bg-gradient">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <span class="badge bg-info text-dark px-3 py-2 mb-3">SUCCESS STORY</span>
+                <h2 class="display-5 fw-bold text-white mb-3">Real-World Impact</h2>
+            </div>
+
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-6">
+                    <div class="service-card">
+                        <h4 class="text-white fw-bold mb-3">Midwest Solar Farm Optimization</h4>
+                        <p class="text-gray mb-4">
+                            A 500-acre solar energy facility in Iowa was experiencing unexplained power output losses.
+                            Using our thermal imaging and AI analysis services, we identified 127 faulty panels across
+                            the farm that were causing hotspots and reducing overall efficiency by 8.3%.
+                        </p>
+                        <div class="row g-3 mb-4">
+                            <div class="col-6">
+                                <div class="border-start border-cyan border-3 ps-3">
+                                    <div class="text-cyan fw-bold h4 mb-1">$285K</div>
+                                    <small class="text-gray">Annual Savings</small>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="border-start border-cyan border-3 ps-3">
+                                    <div class="text-cyan fw-bold h4 mb-1">4 Hours</div>
+                                    <small class="text-gray">Inspection Time</small>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="border-start border-cyan border-3 ps-3">
+                                    <div class="text-cyan fw-bold h4 mb-1">127</div>
+                                    <small class="text-gray">Issues Detected</small>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="border-start border-cyan border-3 ps-3">
+                                    <div class="text-cyan fw-bold h4 mb-1">98.7%</div>
+                                    <small class="text-gray">New Efficiency</small>
+                                </div>
+                            </div>
+                        </div>
+                        <blockquote class="border-start border-cyan border-3 ps-3 mb-0">
+                            <p class="text-gray fst-italic mb-2">"Aeronix identified problems in hours that would have
+                                taken our ground team weeks to find. The ROI was immediate."</p>
+                            <footer class="text-gray small">— David Chen, Operations Manager, MidAmerica Solar</footer>
+                        </blockquote>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row g-3">
+                        <div class="col-12">
+                            <div class="service-card">
+                                <div class="d-flex align-items-center gap-3">
+                                    <i class="bi bi-check-circle-fill text-cyan fs-3"></i>
+                                    <div>
+                                        <h6 class="text-white mb-1">Faster Than Traditional Methods</h6>
+                                        <p class="text-gray small mb-0">95% time reduction vs. manual inspection</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="service-card">
+                                <div class="d-flex align-items-center gap-3">
+                                    <i class="bi bi-check-circle-fill text-cyan fs-3"></i>
+                                    <div>
+                                        <h6 class="text-white mb-1">Non-Invasive Solution</h6>
+                                        <p class="text-gray small mb-0">Zero downtime during inspection</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="service-card">
+                                <div class="d-flex align-items-center gap-3">
+                                    <i class="bi bi-check-circle-fill text-cyan fs-3"></i>
+                                    <div>
+                                        <h6 class="text-white mb-1">Comprehensive Data</h6>
+                                        <p class="text-gray small mb-0">Detailed thermal maps for every panel</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="service-card">
+                                <div class="d-flex align-items-center gap-3">
+                                    <i class="bi bi-check-circle-fill text-cyan fs-3"></i>
+                                    <div>
+                                        <h6 class="text-white mb-1">Predictive Maintenance</h6>
+                                        <p class="text-gray small mb-0">Identify issues before total failure</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-5">
+        <div class="container py-5">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-8">
+                    <h2 class="display-6 fw-bold text-white mb-3">Ready to Elevate Your Project?</h2>
+                    <p class="text-gray lead mb-0">
+                        Schedule a free consultation to discuss your specific needs and get a custom quote.
+                    </p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a href="contact.html" class="btn btn-gradient btn-lg">
+                        Request Quote <i class="bi bi-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="pt-5 pb-4">
         <div class="container">
             <div class="row g-4 mb-5">
                 <div class="col-md-4">
                     <div class="d-flex align-items-center gap-2 mb-3">
+                        <img src="favicon.png" alt="Aeronix Logo" width="36" height="36">
                         <span class="h5 fw-bold text-white m-0 tracking-tight">AERONIX</span>
                     </div>
+                    <small class="text-gray d-block mb-2">Aerial Intelligence Platform</small>
                     <p class="text-gray small">Premier drone services provider for industrial, agricultural, and
                         creative applications.</p>
                 </div>
                 <div class="col-6 col-md-2">
                     <h6 class="text-white fw-bold mb-3">Services</h6>
                     <ul class="list-unstyled d-flex flex-column gap-2 small">
-                        <li><a href="services.html" class="footer-link">Aerial Mapping</a></li>
-                        <li><a href="services.html" class="footer-link">Thermal Inspection</a></li>
-                        <li><a href="services.html" class="footer-link">Drone Delivery</a></li>
+                        <li><a href="services.html#aerial-mapping" class="footer-link">Aerial Mapping</a></li>
+                        <li><a href="services.html#thermal-imaging" class="footer-link">Thermal Inspection</a></li>
+                        <li><a href="services.html#drone-delivery" class="footer-link">Drone Delivery</a></li>
                     </ul>
                 </div>
                 <div class="col-6 col-md-2">
@@ -240,6 +550,7 @@
     <script type="module" src="app.js"></script>
     <script type="module" src="theme.js"></script>
     <script type="module" src="auth.js"></script>
+    <script src="animations.js"></script>
 </body>
 
 </html>

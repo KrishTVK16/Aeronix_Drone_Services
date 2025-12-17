@@ -51,8 +51,8 @@
                         <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">Home</a>
                         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="homeDropdown">
-                            <li><a class="dropdown-item" href="index.html">Home 1</a></li>
-                            <li><a class="dropdown-item" href="home-2.html">Home 2</a></li>
+                            <li><a class="dropdown-item" href="index.html">Home - Classic</a></li>
+                            <li><a class="dropdown-item" href="home-2.html">Home - Platform</a></li>
                         </ul>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
@@ -92,92 +92,140 @@
     </div>
 
     <section class="py-5">
-        <div class="container text-center">
+        <div class="container">
+            <!-- Info Cards Section -->
+            <div class="row g-4 mb-5">
+                <div class="col-md-4">
+                    <div class="info-card text-center">
+                        <div class="info-icon mx-auto">
+                            <i class="bi bi-clock-fill"></i>
+                        </div>
+                        <h5 class="text-white fw-bold mb-2">24-Hour Response</h5>
+                        <p class="text-gray small mb-0">We guarantee a response to your inquiry within 24 hours during
+                            business days</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="info-card text-center">
+                        <div class="info-icon mx-auto">
+                            <i class="bi bi-headset"></i>
+                        </div>
+                        <h5 class="text-white fw-bold mb-2">24/7 Support</h5>
+                        <p class="text-gray small mb-0">Available around the clock for consultations and emergency
+                            flight requests</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="info-card text-center">
+                        <div class="info-icon mx-auto">
+                            <i class="bi bi-award-fill"></i>
+                        </div>
+                        <h5 class="text-white fw-bold mb-2">Expert Team</h5>
+                        <p class="text-gray small mb-0">50+ FAA-certified pilots with 2000+ successful flight missions
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <!-- Alert Area for Success/Error Messages -->
                     <div id="formAlert" class="alert d-none mb-4" role="alert"></div>
 
-                    <form id="contactForm" class="text-start" style="max-width: 600px; margin: 0 auto;">
-                        <div class="row g-3">
-                            <!-- Name Field -->
-                            <div class="col-md-6">
-                                <label for="contactName" class="form-label text-white">Name <span
-                                        class="text-danger">*</span></label>
-                                <input type="text" id="contactName"
-                                    class="form-control bg-dark text-white border-secondary py-2 px-3"
-                                    placeholder="Your name" required>
-                                <div class="invalid-feedback">Please enter your name.</div>
-                            </div>
+                    <div class="contact-form-container">
+                        <form id="contactForm" class="text-start">
+                            <div class="row g-3">
+                                <!-- Name Field -->
+                                <div class="col-md-6">
+                                    <label for="contactName" class="form-label text-white">Name <span
+                                            class="text-danger">*</span></label>
+                                    <input type="text" id="contactName"
+                                        class="form-control bg-dark text-white border-secondary py-2 px-3"
+                                        placeholder="Your name" required>
+                                    <div class="invalid-feedback">Please enter your name.</div>
+                                </div>
 
-                            <!-- Email Field -->
-                            <div class="col-md-6">
-                                <label for="contactEmail" class="form-label text-white">Email <span
-                                        class="text-danger">*</span></label>
-                                <input type="email" id="contactEmail"
-                                    class="form-control bg-dark text-white border-secondary py-2 px-3"
-                                    placeholder="your.email@company.com" required>
-                                <div class="invalid-feedback">Please enter a valid email.</div>
-                            </div>
+                                <!-- Email Field -->
+                                <div class="col-md-6">
+                                    <label for="contactEmail" class="form-label text-white">Email <span
+                                            class="text-danger">*</span></label>
+                                    <input type="email" id="contactEmail"
+                                        class="form-control bg-dark text-white border-secondary py-2 px-3"
+                                        placeholder="your.email@company.com" required>
+                                    <div class="invalid-feedback">Please enter a valid email.</div>
+                                </div>
 
-                            <!-- Subject Field -->
-                            <div class="col-12">
-                                <label for="contactSubject" class="form-label text-white">Subject <span
-                                        class="text-danger">*</span></label>
-                                <input type="text" id="contactSubject"
-                                    class="form-control bg-dark text-white border-secondary py-2 px-3"
-                                    placeholder="What service are you interested in?" required>
-                                <div class="invalid-feedback">Please enter a subject.</div>
-                            </div>
+                                <!-- Subject Field -->
+                                <div class="col-12">
+                                    <label for="contactSubject" class="form-label text-white">Subject <span
+                                            class="text-danger">*</span></label>
+                                    <input type="text" id="contactSubject"
+                                        class="form-control bg-dark text-white border-secondary py-2 px-3"
+                                        placeholder="What service are you interested in?" required>
+                                    <div class="invalid-feedback">Please enter a subject.</div>
+                                </div>
 
-                            <!-- Message Field -->
-                            <div class="col-12">
-                                <label for="contactMessage" class="form-label text-white">Message <span
-                                        class="text-danger">*</span></label>
-                                <textarea id="contactMessage" rows="5"
-                                    class="form-control bg-dark text-white border-secondary py-2 px-3"
-                                    placeholder="Tell us about your project..." required></textarea>
-                                <div class="invalid-feedback">Please enter your message.</div>
-                            </div>
+                                <!-- Message Field -->
+                                <div class="col-12">
+                                    <label for="contactMessage" class="form-label text-white">Message <span
+                                            class="text-danger">*</span></label>
+                                    <textarea id="contactMessage" rows="5"
+                                        class="form-control bg-dark text-white border-secondary py-2 px-3"
+                                        placeholder="Tell us about your project..." required></textarea>
+                                    <div class="invalid-feedback">Please enter your message.</div>
+                                </div>
 
-                            <!-- Honeypot for spam protection (hidden) -->
-                            <div class="col-12 d-none">
-                                <input type="text" id="honeypot" name="website" tabindex="-1" autocomplete="off">
-                            </div>
+                                <!-- Honeypot for spam protection (hidden) -->
+                                <div class="col-12 d-none">
+                                    <input type="text" id="honeypot" name="website" tabindex="-1" autocomplete="off">
+                                </div>
 
-                            <!-- Submit Button -->
-                            <div class="col-12 text-center mt-4">
-                                <button type="submit" class="btn btn-gradient py-3 px-5">
-                                    <span class="btn-text">Send Message</span>
-                                    <i class="bi bi-send ms-2"></i>
-                                </button>
+                                <!-- Submit Button -->
+                                <div class="col-12 text-center mt-4">
+                                    <button type="submit" class="btn btn-gradient py-3 px-5">
+                                        <span class="btn-text">Send Message</span>
+                                        <i class="bi bi-send ms-2"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                        <p class="text-muted mt-4 small text-center">All flights comply with FAA Part 107 regulations.
+                        </p>
+                    </div>
+
+
+                    <div class="row g-4 mt-5">
+                        <div class="col-md-4">
+                            <div class="info-card-simple text-center">
+                                <div class="info-icon-simple mx-auto mb-3">
+                                    <i class="bi bi-envelope-fill"></i>
+                                </div>
+                                <h5 class="text-white fw-bold mb-3">Email</h5>
+                                <a href="mailto:contact@aeronix.com" class="text-decoration-none">
+                                    <p class="text-gray hover-text-white transition mb-0">contact@aeronix.com</p>
+                                </a>
                             </div>
                         </div>
-                    </form>
-                    <p class="text-muted mt-4 small text-center">All flights comply with FAA Part 107 regulations.</p>
-
-                    <div class="row mt-5">
-                        <div class="col-md-4 text-center">
-                            <h5 class="text-white mb-3">
-                                <i class="bi bi-envelope me-2"></i>Email
-                            </h5>
-                            <a href="mailto:contact@aeronix.com" class="text-decoration-none">
-                                <p class="text-gray hover-text-white transition">contact@aeronix.com</p>
-                            </a>
+                        <div class="col-md-4">
+                            <div class="info-card-simple text-center">
+                                <div class="info-icon-simple mx-auto mb-3">
+                                    <i class="bi bi-telephone-fill"></i>
+                                </div>
+                                <h5 class="text-white fw-bold mb-3">Phone</h5>
+                                <a href="tel:+15551234567" class="text-decoration-none">
+                                    <p class="text-gray hover-text-white transition mb-0">+1 (555) 123-4567</p>
+                                </a>
+                            </div>
                         </div>
-                        <div class="col-md-4 text-center">
-                            <h5 class="text-white mb-3">
-                                <i class="bi bi-telephone me-2"></i>Phone
-                            </h5>
-                            <a href="tel:+15551234567" class="text-decoration-none">
-                                <p class="text-gray hover-text-white transition">+1 (555) 123-4567</p>
-                            </a>
-                        </div>
-                        <div class="col-md-4 text-center">
-                            <h5 class="text-white mb-3">
-                                <i class="bi bi-geo-alt me-2"></i>HQ
-                            </h5>
-                            <p class="text-gray">San Francisco, CA</p>
+                        <div class="col-md-4">
+                            <div class="info-card-simple text-center">
+                                <div class="info-icon-simple mx-auto mb-3">
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                </div>
+                                <h5 class="text-white fw-bold mb-3">Headquarters</h5>
+                                <p class="text-gray mb-0">San Francisco, CA</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -188,15 +236,20 @@
     <footer class="pt-5 pb-4">
         <div class="container">
             <div class="row g-4 mb-5">
-                <div class="col-md-4"><span class="h5 fw-bold text-white m-0 tracking-tight">AERONIX</span>
+                <div class="col-md-4">
+                    <div class="d-flex align-items-center gap-2 mb-3">
+                        <img src="favicon.png" alt="Aeronix Logo" width="36" height="36">
+                        <span class="h5 fw-bold text-white m-0 tracking-tight">AERONIX</span>
+                    </div>
+                    <small class="text-gray d-block mb-2">Aerial Intelligence Platform</small>
                     <p class="text-gray small mt-3">Premier drone services provider.</p>
                 </div>
                 <div class="col-6 col-md-2">
                     <h6 class="text-white fw-bold mb-3">Services</h6>
                     <ul class="list-unstyled d-flex flex-column gap-2 small">
-                        <li><a href="services.html" class="footer-link">Aerial Mapping</a></li>
-                        <li><a href="services.html" class="footer-link">Thermal Inspection</a></li>
-                        <li><a href="services.html" class="footer-link">Drone Delivery</a></li>
+                        <li><a href="services.html#aerial-mapping" class="footer-link">Aerial Mapping</a></li>
+                        <li><a href="services.html#thermal-imaging" class="footer-link">Thermal Inspection</a></li>
+                        <li><a href="services.html#drone-delivery" class="footer-link">Drone Delivery</a></li>
                     </ul>
                 </div>
                 <div class="col-6 col-md-2">
@@ -234,6 +287,7 @@
     <script type="module" src="app.js"></script>
     <script type="module" src="theme.js"></script>
     <script type="module" src="auth.js"></script>
+    <script src="animations.js"></script>
 </body>
 
 </html>

@@ -66,11 +66,20 @@
                 <span class="fw-bold text-white ls-1">AERONIX</span>
             </a>
 
-            <button class="navbar-toggler border-0 shadow-none text-white" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-                aria-label="Toggle navigation menu">
-                <i class="bi bi-list fs-2"></i>
-            </button>
+            <div class="d-flex align-items-center gap-2">
+                <!-- Theme Toggle - Always visible beside nav toggle -->
+                <button id="themeToggle" class="btn btn-sm btn-outline-custom border-0 p-2"
+                    style="white-space: nowrap;">
+                    <i class="bi bi-sun-fill"></i>
+                </button>
+
+                <!-- Nav Toggle Button -->
+                <button class="navbar-toggler border-0 shadow-none text-white" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation menu" style="white-space: nowrap;">
+                    <i class="bi bi-list fs-2"></i>
+                </button>
+            </div>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-center gap-lg-4">
                     <!-- Home Dropdown -->
@@ -80,8 +89,8 @@
                             Home
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="homeDropdown">
-                            <li><a class="dropdown-item active" href="index.html">Home 1</a></li>
-                            <li><a class="dropdown-item" href="home-2.html">Home 2</a></li>
+                            <li><a class="dropdown-item active" href="index.html">Home - Classic</a></li>
+                            <li><a class="dropdown-item" href="home-2.html">Home - Platform</a></li>
                         </ul>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
@@ -92,13 +101,15 @@
                     <!-- Auth Buttons -->
                     <li class="nav-item" id="authButtons">
                         <div class="d-flex gap-2 align-items-center mt-3 mt-lg-0">
-                            <a href="login.html" class="btn btn-sm btn-outline-custom">Login</a>
-                            <a href="signup.html" class="btn btn-sm btn-gradient">Sign Up</a>
+                            <a href="login.html" class="btn btn-sm btn-outline-custom"
+                                style="white-space: nowrap;">Login</a>
+                            <a href="signup.html" class="btn btn-sm btn-gradient" style="white-space: nowrap;">Sign
+                                Up</a>
                         </div>
                     </li>
 
                     <!-- User Menu (hidden by default) -->
-                    <li class="nav-item dropdown" id="userMenu" style="display: none;">
+                    <li class=" nav-item dropdown" id="userMenu" style="display: none;">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
                             <i class="bi bi-person-circle me-1"></i>
                             <span class="user-name">User</span>
@@ -110,12 +121,6 @@
                         </ul>
                     </li>
 
-                    <!-- Theme Toggle -->
-                    <li class="nav-item">
-                        <button id="themeToggle" class="btn btn-sm btn-outline-custom border-0 p-2">
-                            <i class="bi bi-sun-fill"></i>
-                        </button>
-                    </li>
                 </ul>
             </div>
         </div>
@@ -161,6 +166,212 @@
                 <i class="bi bi-chevron-down fs-3" aria-hidden="true"></i>
             </div>
         </section>
+
+        <!-- Features Section -->
+        <section class="py-5 section-bg-gradient">
+            <div class="container py-5">
+                <div class="text-center mb-5">
+                    <h2 class="display-5 fw-bold text-white mb-3">Why Choose Aeronix?</h2>
+                    <p class="text-gray lead mx-auto" style="max-width: 600px;">
+                        Industry-leading drone solutions backed by cutting-edge technology and certified expertise
+                    </p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="service-card text-center h-100">
+                            <div class="icon-box mx-auto">
+                                <i class="bi bi-shield-check"></i>
+                            </div>
+                            <h5 class="text-white fw-bold mb-3">FAA Certified Pilots</h5>
+                            <p class="text-gray">All pilots hold FAA Part 107 certification with extensive flight
+                                experience and rigorous safety training protocols.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="service-card text-center h-100">
+                            <div class="icon-box mx-auto">
+                                <i class="bi bi-cpu"></i>
+                            </div>
+                            <h5 class="text-white fw-bold mb-3">AI-Powered Analytics</h5>
+                            <p class="text-gray">Advanced machine learning algorithms process aerial data to deliver
+                                actionable insights and precise measurements.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="service-card text-center h-100">
+                            <div class="icon-box mx-auto">
+                                <i class="bi bi-clock-history"></i>
+                            </div>
+                            <h5 class="text-white fw-bold mb-3">24-Hour Turnaround</h5>
+                            <p class="text-gray">Fast data processing and delivery ensures you get your results when you
+                                need them most.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="py-5">
+            <div class="container py-4">
+                <div class="row g-4 text-center">
+                    <div class="col-6 col-md-3">
+                        <h2 class="display-4 fw-bold text-cyan mb-2">2,500+</h2>
+                        <p class="text-gray mb-0">Flight Hours</p>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <h2 class="display-4 fw-bold text-cyan mb-2">850+</h2>
+                        <p class="text-gray mb-0">Projects Completed</p>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <h2 class="display-4 fw-bold text-cyan mb-2">98%</h2>
+                        <p class="text-gray mb-0">Client Satisfaction</p>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <h2 class="display-4 fw-bold text-cyan mb-2">15+</h2>
+                        <p class="text-gray mb-0">Industries Served</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Latest Projects showcase -->
+        <section class="py-5 section-bg-gradient">
+            <div class="container py-5">
+                <div class="text-center mb-5">
+                    <h2 class="display-5 fw-bold text-white mb-3">Featured Projects</h2>
+                    <p class="text-gray lead mx-auto" style="max-width: 600px;">
+                        Explore our recent drone operations across various industries
+                    </p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="service-card h-100">
+                            <div class="mb-3">
+                                <span class="badge bg-info text-dark px-3 py-2">Construction</span>
+                            </div>
+                            <h5 class="text-white fw-bold mb-3">Downtown Skyrise Development</h5>
+                            <p class="text-gray mb-3">Weekly aerial progress tracking and 3D modeling for a 45-story
+                                commercial building project in Chicago.</p>
+                            <div class="d-flex gap-3 small text-gray">
+                                <span><i class="bi bi-geo-alt me-1"></i>Chicago, IL</span>
+                                <span><i class="bi bi-calendar3 me-1"></i>Dec 2024</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="service-card h-100">
+                            <div class="mb-3">
+                                <span class="badge bg-warning text-dark px-3 py-2">Solar Energy</span>
+                            </div>
+                            <h5 class="text-white fw-bold mb-3">Solar Farm Thermal Inspection</h5>
+                            <p class="text-gray mb-3">Thermal imaging survey of 50,000 solar panels to detect hotspots
+                                and optimize energy output.</p>
+                            <div class="d-flex gap-3 small text-gray">
+                                <span><i class="bi bi-geo-alt me-1"></i>Phoenix, AZ</span>
+                                <span><i class="bi bi-calendar3 me-1"></i>Nov 2024</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="service-card h-100">
+                            <div class="mb-3">
+                                <span class="badge bg-success px-3 py-2">Agriculture</span>
+                            </div>
+                            <h5 class="text-white fw-bold mb-3">Precision Agriculture Mapping</h5>
+                            <p class="text-gray mb-3">Multispectral analysis of 2,000-acre farmland for crop health
+                                monitoring and irrigation optimization.</p>
+                            <div class="d-flex gap-3 small text-gray">
+                                <span><i class="bi bi-geo-alt me-1"></i>Iowa</span>
+                                <span><i class="bi bi-calendar3 me-1"></i>Oct 2024</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-5">
+                    <a href="services.html" class="btn btn-gradient">
+                        View All Services <i class="bi bi-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Client Testimonials -->
+        <section class="py-5">
+            <div class="container py-5">
+                <div class="text-center mb-5">
+                    <h2 class="display-5 fw-bold text-white mb-3">What Our Clients Say</h2>
+                    <p class="text-gray lead mx-auto" style="max-width: 600px;">
+                        Trusted by leading organizations worldwide
+                    </p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="service-card h-100">
+                            <div class="mb-3">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                            </div>
+                            <p class="text-gray mb-4">"Aeronix's aerial mapping services transformed our construction
+                                workflow. The precision and speed of their deliverables have saved us countless hours
+                                and significantly improved our project planning."</p>
+                            <div class="d-flex align-items-center gap-3">
+                                <div>
+                                    <h6 class="text-white mb-0">Sarah Mitchell</h6>
+                                    <small class="text-gray">Project Manager, BuildTech Solutions</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="service-card h-100">
+                            <div class="mb-3">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                            </div>
+                            <p class="text-gray mb-4">"The thermal inspection service helped us identify equipment
+                                issues before they became costly failures. The ROI has been incredible, and the team is
+                                extremely professional."</p>
+                            <div class="d-flex align-items-center gap-3">
+                                <div>
+                                    <h6 class="text-white mb-0">Marcus Rodriguez</h6>
+                                    <small class="text-gray">Operations Director, SolarWave Energy</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-5 section-bg-gradient">
+            <div class="container py-5">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-8">
+                        <h2 class="display-5 fw-bold text-white mb-3">Ready to Take Flight?</h2>
+                        <p class="text-gray lead mb-0">
+                            Get a free consultation and discover how our drone services can elevate your next project.
+                        </p>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <a href="contact.html" class="btn btn-gradient btn-lg">
+                            Get Started Today <i class="bi bi-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Footer -->
@@ -198,9 +409,9 @@
                 <div class="col-6 col-md-2">
                     <h6 class="text-white fw-bold mb-3">Services</h6>
                     <ul class="list-unstyled d-flex flex-column gap-2 small">
-                        <li><a href="services.html" class="footer-link">Aerial Mapping</a></li>
-                        <li><a href="services.html" class="footer-link">Thermal Inspection</a></li>
-                        <li><a href="services.html" class="footer-link">Drone Delivery</a></li>
+                        <li><a href="services.html#aerial-mapping" class="footer-link">Aerial Mapping</a></li>
+                        <li><a href="services.html#thermal-imaging" class="footer-link">Thermal Inspection</a></li>
+                        <li><a href="services.html#drone-delivery" class="footer-link">Drone Delivery</a></li>
                     </ul>
                 </div>
                 <div class="col-6 col-md-2">
@@ -244,6 +455,7 @@
     <script type="module" src="app.js"></script>
     <script type="module" src="theme.js"></script>
     <script type="module" src="auth.js"></script>
+    <script src="animations.js"></script>
 </body>
 
 </html>
