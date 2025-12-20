@@ -354,6 +354,21 @@ body {
     backdrop-filter: blur(4px);
 }
 
+/* Responsive badge text colors - ensure good contrast */
+.badge-responsive {
+    color: #ffffff !important;
+}
+
+[data-theme="light"] .badge.bg-cyan.badge-responsive,
+[data-theme="light"] .badge.bg-info.badge-responsive,
+[data-theme="light"] .badge.bg-warning.badge-responsive {
+    color: #000000 !important;
+}
+
+[data-theme="light"] .badge.bg-success.badge-responsive {
+    color: #ffffff !important;
+}
+
 /* Service Cards */
 .section-bg-gradient {
     background: linear-gradient(180deg, var(--autonix-bg), var(--autonix-dark));
@@ -443,6 +458,14 @@ footer {
     margin-top: auto;
 }
 
+footer .text-muted {
+    color: var(--text-muted) !important;
+}
+
+[data-theme="light"] footer .text-muted {
+    color: var(--text-muted) !important;
+}
+
 .footer-link {
     color: var(--text-muted);
     text-decoration: none;
@@ -451,6 +474,17 @@ footer {
 
 .footer-link:hover {
     color: var(--autonix-blue-soft);
+}
+
+/* Divider with text (for login/signup pages) - transparent background */
+.service-card .divider-text {
+    background: transparent !important;
+    z-index: 1;
+}
+
+[data-theme="light"] .service-card .divider-text {
+    background: transparent !important;
+    z-index: 1;
 }
 
 /* Chat Widget */
