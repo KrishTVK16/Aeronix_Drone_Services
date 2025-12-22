@@ -1,8 +1,8 @@
 // Theme Management System
 const themeToggle = {
     init() {
-        // Load saved theme or default to dark
-        const savedTheme = localStorage.getItem('aeronix-theme') || 'dark';
+        // Load saved theme or default to light
+        const savedTheme = localStorage.getItem('aeronix-theme') || 'light';
         this.setTheme(savedTheme, false);
 
         // Add event listener to theme toggle button
@@ -22,7 +22,7 @@ const themeToggle = {
     },
 
     toggle() {
-        const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+        const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
         const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
         this.setTheme(newTheme);
     },
