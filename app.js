@@ -17,6 +17,69 @@ if (navbar) {
     }
 }
 
+// Navigation Close Functionality
+function initNavigationClose() {
+    const navbarCollapse = document.getElementById('navbarNav');
+    if (!navbarCollapse) return;
+
+    // Function to close navigation
+    function closeNavigation() {
+        if (navbarCollapse.classList.contains('show')) {
+            const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse) || new bootstrap.Collapse(navbarCollapse);
+            bsCollapse.hide();
+        }
+    }
+
+    // Close button (X) click handler
+    const closeBtn = document.getElementById('navCloseBtn');
+    if (closeBtn) {
+        closeBtn.addEventListener('click', closeNavigation);
+    }
+
+    // Close on outside click
+    document.addEventListener('click', (e) => {
+        const navbar = document.getElementById('mainNavbar');
+        const navbarToggler = document.querySelector('.navbar-toggler');
+        
+        // Check if click is outside navbar and navigation is open
+        if (navbarCollapse.classList.contains('show') && 
+            !navbar.contains(e.target) && 
+            !navbarToggler?.contains(e.target)) {
+            closeNavigation();
+        }
+    });
+
+    // Close on window resize (when screen size increases)
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+            // Close navigation if window width is greater than lg breakpoint (992px)
+            if (window.innerWidth >= 992 && navbarCollapse.classList.contains('show')) {
+                closeNavigation();
+            }
+        }, 100);
+    });
+
+    // Close navigation when clicking on nav links (mobile)
+    const navLinks = navbarCollapse.querySelectorAll('.nav-link, .dropdown-item');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            // Small delay to allow navigation to happen first
+            setTimeout(() => {
+                if (window.innerWidth < 992) {
+                    closeNavigation();
+                }
+            }, 100);
+        });
+    });
+}
+
+// Initialize navigation close functionality
+document.addEventListener('DOMContentLoaded', () => {
+    initNavigationClose();
+});
+
 // Active Link Highlighter (Based on URL)
 const currentPath = window.location.pathname.split('/').pop() || 'index.html';
 const navLinks = document.querySelectorAll('.nav-link');

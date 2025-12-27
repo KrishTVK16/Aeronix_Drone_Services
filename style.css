@@ -176,7 +176,16 @@ body {
         margin-top: 0.5rem;
         box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
         z-index: 1000;
-        overflow-x: hidden;
+        overflow: visible;
+    }
+
+    /* Close button positioning in mobile navbar */
+    .navbar-collapse #navCloseBtn {
+        position: absolute;
+        top: 0.75rem;
+        right: 0.75rem;
+        z-index: 1050;
+        opacity: 1;
     }
 
     /* Light mode mobile navbar */
