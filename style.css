@@ -140,6 +140,12 @@ body {
     padding: 0.75rem 0;
 }
 
+/* Light mode navbar-scrolled */
+[data-theme="light"] .navbar-scrolled {
+    background-color: rgba(248, 250, 252, 0.95);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 .nav-link {
     color: var(--text-muted) !important;
     font-size: 0.9rem;
@@ -171,6 +177,13 @@ body {
         box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
         z-index: 1000;
         overflow-x: hidden;
+    }
+
+    /* Light mode mobile navbar */
+    [data-theme="light"] .navbar-collapse {
+        background: rgba(255, 255, 255, 0.98);
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
     }
 
     .navbar-nav.align-items-center {
