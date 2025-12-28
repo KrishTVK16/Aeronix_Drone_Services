@@ -61,16 +61,20 @@ function initNavigationClose() {
         }, 100);
     });
 
-    // Close navigation when clicking on nav links (mobile)
-    const navLinks = navbarCollapse.querySelectorAll('.nav-link, .dropdown-item');
+    // Close navigation when clicking on nav links (mobile) - but NOT dropdown toggles
+    const navLinks = navbarCollapse.querySelectorAll('.nav-link:not(.dropdown-toggle), .dropdown-item');
     navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            // Small delay to allow navigation to happen first
-            setTimeout(() => {
-                if (window.innerWidth < 992) {
-                    closeNavigation();
-                }
-            }, 100);
+        link.addEventListener('click', (e) => {
+            // Only close if it's an actual navigation link (has href) and not just a toggle
+            const href = link.getAttribute('href');
+            if (href && href !== '#') {
+                // Small delay to allow navigation to happen first
+                setTimeout(() => {
+                    if (window.innerWidth < 992) {
+                        closeNavigation();
+                    }
+                }, 100);
+            }
         });
     });
 }

@@ -44,7 +44,7 @@
             width: 100%;
             height: 100%;
             background: radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.1), transparent 50%),
-                        radial-gradient(circle at 80% 80%, rgba(56, 189, 248, 0.1), transparent 50%);
+                radial-gradient(circle at 80% 80%, rgba(56, 189, 248, 0.1), transparent 50%);
             pointer-events: none;
             z-index: 0;
             animation: pulse 8s ease-in-out infinite;
@@ -52,17 +52,33 @@
 
         [data-theme="light"] .dashboard-container::before {
             background: radial-gradient(circle at 20% 50%, rgba(37, 99, 235, 0.08), transparent 50%),
-                        radial-gradient(circle at 80% 80%, rgba(8, 145, 178, 0.08), transparent 50%);
+                radial-gradient(circle at 80% 80%, rgba(8, 145, 178, 0.08), transparent 50%);
         }
 
         @keyframes pulse {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.8; transform: scale(1.05); }
+
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.8;
+                transform: scale(1.05);
+            }
         }
 
         @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
         }
 
         @keyframes slideIn {
@@ -70,6 +86,7 @@
                 opacity: 0;
                 transform: translateX(-20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateX(0);
@@ -81,6 +98,7 @@
                 opacity: 0;
                 transform: translateY(20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -88,13 +106,23 @@
         }
 
         @keyframes shimmer {
-            0% { background-position: -1000px 0; }
-            100% { background-position: 1000px 0; }
+            0% {
+                background-position: -1000px 0;
+            }
+
+            100% {
+                background-position: 1000px 0;
+            }
         }
 
         @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
         }
 
         .dashboard-sidebar {
@@ -305,10 +333,21 @@
             background: linear-gradient(135deg, rgba(37, 99, 235, 0.08), rgba(59, 130, 246, 0.04));
         }
 
-        .review-item:nth-child(1) { animation-delay: 0.1s; }
-        .review-item:nth-child(2) { animation-delay: 0.2s; }
-        .review-item:nth-child(3) { animation-delay: 0.3s; }
-        .review-item:nth-child(4) { animation-delay: 0.4s; }
+        .review-item:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .review-item:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .review-item:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .review-item:nth-child(4) {
+            animation-delay: 0.4s;
+        }
 
         .review-item:last-child {
             margin-bottom: 0;
@@ -432,8 +471,15 @@
         }
 
         @keyframes gradientShift {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
+
+            0%,
+            100% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
         }
 
         .metric-label {
@@ -582,7 +628,9 @@
         }
 
         @keyframes progressLoad {
-            from { width: 0; }
+            from {
+                width: 0;
+            }
         }
 
         /* Button animations */
@@ -731,8 +779,15 @@
 
         /* Number counter animation */
         @keyframes countUp {
-            from { opacity: 0; transform: scale(0.8); }
-            to { opacity: 1; transform: scale(1); }
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
         }
 
         .metric-value {
@@ -765,8 +820,8 @@
             <!-- Theme Toggle and Mobile Toggle Button -->
             <div class="d-flex align-items-center gap-2">
                 <!-- Theme Toggle - Always visible beside nav toggle -->
-                <button id="themeToggle" class="btn btn-sm btn-outline-custom border-0 p-2"
-                    style="white-space: nowrap;" aria-label="Toggle theme">
+                <button id="themeToggle" class="btn btn-sm btn-outline-custom border-0 p-2" style="white-space: nowrap;"
+                    aria-label="Toggle theme">
                     <i class="bi bi-sun-fill"></i>
                 </button>
 
@@ -781,9 +836,8 @@
             <!-- Navigation Items -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <!-- Close Button (X) for Mobile -->
-                <button class="btn-close btn-close-white d-lg-none position-absolute top-0 end-0 m-3" 
-                    type="button" aria-label="Close navigation" id="navCloseBtn"
-                    style="z-index: 1050;">
+                <button class="btn-close btn-close-white d-lg-none position-absolute top-0 end-0 m-3" type="button"
+                    aria-label="Close navigation" id="navCloseBtn" style="z-index: 1050;">
                 </button>
 
                 <ul class="navbar-nav ms-auto align-items-center gap-lg-3">
@@ -915,13 +969,15 @@
                                     <div class="col-md-6">
                                         <div class="review-item">
                                             <h5 class="text-white mb-2">Total Applications</h5>
-                                            <p class="text-muted mb-0">620 applications received</p>
+                                            <p class="mb-0" style="color: #cbd5e1 !important;">620 applications received
+                                            </p>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="review-item">
                                             <h5 class="text-white mb-2">Pending Reviews</h5>
-                                            <p class="text-muted mb-0">310 applications awaiting review</p>
+                                            <p class="mb-0" style="color: #cbd5e1 !important;">310 applications awaiting
+                                                review</p>
                                         </div>
                                     </div>
                                 </div>
@@ -978,13 +1034,13 @@
                         <div class="col-md-6">
                             <div class="review-item">
                                 <h5 class="text-white mb-2">Total Applications</h5>
-                                <p class="text-muted mb-0">620 applications received</p>
+                                <p class="mb-0" style="color: #cbd5e1 !important;">620 applications received</p>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="review-item">
                                 <h5 class="text-white mb-2">Pending Reviews</h5>
-                                <p class="text-muted mb-0">310 applications awaiting review</p>
+                                <p class="mb-0" style="color: #cbd5e1 !important;">310 applications awaiting review</p>
                             </div>
                         </div>
                     </div>
@@ -1014,18 +1070,18 @@
                 <div class="review-workspace">
                     <h3 class="text-white mb-4"><i class="bi bi-folder me-2"></i>Program Management</h3>
                     <div class="review-item">
-                        <div class="d-flex justify-content-between align-items-start mb-3">
-                            <div>
+                        <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center align-items-sm-start mb-3 gap-2 text-center text-sm-start">
+                            <div class="flex-grow-1">
                                 <h5 class="text-white mb-2">Aerial Mapping Program 2024</h5>
-                                <p class="text-muted mb-0">
-                                    <i class="bi bi-calendar3 me-2"></i>Started: Jan 15, 2024
-                                    <span class="ms-3"><i class="bi bi-people me-2"></i>Participants: 45</span>
+                                <p class="mb-0 small" style="color: #cbd5e1 !important;">
+                                    <i class="bi bi-calendar3 me-1"></i><span style="color: #cbd5e1 !important;">Started: Jan 15, 2024</span>
+                                    <span class="d-block d-sm-inline ms-sm-3 mt-1 mt-sm-0"><i class="bi bi-people me-1"></i><span style="color: #cbd5e1 !important;">Participants: 45</span></span>
                                 </p>
                             </div>
-                            <span class="badge-status verified">Active</span>
+                            <span class="badge-status verified flex-shrink-0">Active</span>
                         </div>
-                        <p class="text-gray mb-3">Comprehensive aerial mapping initiative covering industrial zones and urban planning areas.</p>
-                        <div class="d-flex gap-2">
+                        <p class="text-gray mb-3 text-center text-sm-start">Comprehensive aerial mapping initiative covering industrial zones and urban planning areas.</p>
+                        <div class="d-flex flex-column flex-sm-row gap-2">
                             <button class="btn btn-sm btn-outline-custom">
                                 <i class="bi bi-eye me-1"></i>View Details
                             </button>
@@ -1035,18 +1091,18 @@
                         </div>
                     </div>
                     <div class="review-item">
-                        <div class="d-flex justify-content-between align-items-start mb-3">
-                            <div>
+                        <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center align-items-sm-start mb-3 gap-2 text-center text-sm-start">
+                            <div class="flex-grow-1">
                                 <h5 class="text-white mb-2">Thermal Inspection Initiative</h5>
-                                <p class="text-muted mb-0">
-                                    <i class="bi bi-calendar3 me-2"></i>Started: Feb 1, 2024
-                                    <span class="ms-3"><i class="bi bi-people me-2"></i>Participants: 32</span>
+                                <p class="mb-0 small" style="color: #cbd5e1 !important;">
+                                    <i class="bi bi-calendar3 me-1"></i><span style="color: #cbd5e1 !important;">Started: Feb 1, 2024</span>
+                                    <span class="d-block d-sm-inline ms-sm-3 mt-1 mt-sm-0"><i class="bi bi-people me-1"></i><span style="color: #cbd5e1 !important;">Participants: 32</span></span>
                                 </p>
                             </div>
-                            <span class="badge-status processing">In Progress</span>
+                            <span class="badge-status processing flex-shrink-0">In Progress</span>
                         </div>
-                        <p class="text-gray mb-3">Ongoing thermal inspection program for solar farms and industrial facilities.</p>
-                        <div class="d-flex gap-2">
+                        <p class="text-gray mb-3 text-center text-sm-start">Ongoing thermal inspection program for solar farms and industrial facilities.</p>
+                        <div class="d-flex flex-column flex-sm-row gap-2">
                             <button class="btn btn-sm btn-outline-custom">
                                 <i class="bi bi-eye me-1"></i>View Details
                             </button>
@@ -1056,18 +1112,18 @@
                         </div>
                     </div>
                     <div class="review-item">
-                        <div class="d-flex justify-content-between align-items-start mb-3">
-                            <div>
+                        <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center align-items-sm-start mb-3 gap-2 text-center text-sm-start">
+                            <div class="flex-grow-1">
                                 <h5 class="text-white mb-2">Precision Agriculture Program</h5>
-                                <p class="text-muted mb-0">
-                                    <i class="bi bi-calendar3 me-2"></i>Completed: Dec 20, 2023
-                                    <span class="ms-3"><i class="bi bi-people me-2"></i>Participants: 28</span>
+                                <p class="mb-0 small" style="color: #cbd5e1 !important;">
+                                    <i class="bi bi-calendar3 me-1"></i><span style="color: #cbd5e1 !important;">Completed: Dec 20, 2023</span>
+                                    <span class="d-block d-sm-inline ms-sm-3 mt-1 mt-sm-0"><i class="bi bi-people me-1"></i><span style="color: #cbd5e1 !important;">Participants: 28</span></span>
                                 </p>
                             </div>
-                            <span class="badge-status verified">Completed</span>
+                            <span class="badge-status verified flex-shrink-0">Completed</span>
                         </div>
-                        <p class="text-gray mb-3">Successfully completed agricultural mapping program for crop monitoring and optimization.</p>
-                        <div class="d-flex gap-2">
+                        <p class="text-gray mb-3 text-center text-sm-start">Successfully completed agricultural mapping program for crop monitoring and optimization.</p>
+                        <div class="d-flex flex-column flex-sm-row gap-2">
                             <button class="btn btn-sm btn-outline-custom">
                                 <i class="bi bi-eye me-1"></i>View Report
                             </button>
@@ -1109,27 +1165,27 @@
                 <div class="review-workspace">
                     <h3 class="text-white mb-4"><i class="bi bi-people me-2"></i>Applicant Management</h3>
                     <div class="review-item">
-                        <div class="d-flex justify-content-between align-items-start mb-3">
-                            <div>
+                        <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center align-items-sm-start mb-3 gap-2 text-center text-sm-start">
+                            <div class="flex-grow-1">
                                 <h5 class="text-white mb-2">John Smith</h5>
-                                <p class="text-muted mb-0">
-                                    <i class="bi bi-envelope me-2"></i>john.smith@email.com
-                                    <span class="ms-3"><i class="bi bi-telephone me-2"></i>+1 (555) 123-4567</span>
+                                <p class="mb-0 small" style="color: #cbd5e1 !important;">
+                                    <i class="bi bi-envelope me-1"></i><span style="color: #cbd5e1 !important;">john.smith@email.com</span>
+                                    <span class="d-block d-sm-inline ms-sm-3 mt-1 mt-sm-0"><i class="bi bi-telephone me-1"></i><span style="color: #cbd5e1 !important;">+1 (555) 123-4567</span></span>
                                 </p>
                             </div>
-                            <span class="badge-status verified">Verified</span>
+                            <span class="badge-status verified flex-shrink-0">Verified</span>
                         </div>
-                        <div class="row g-3 mb-3">
-                            <div class="col-md-6">
-                                <small class="text-muted d-block mb-1">Application Date</small>
+                        <div class="row g-3 mb-3 text-center text-sm-start">
+                            <div class="col-sm-6">
+                                <small class="d-block mb-1" style="color: #cbd5e1 !important;">Application Date</small>
                                 <span class="text-white">March 15, 2024</span>
                             </div>
-                            <div class="col-md-6">
-                                <small class="text-muted d-block mb-1">Status</small>
+                            <div class="col-sm-6">
+                                <small class="d-block mb-1" style="color: #cbd5e1 !important;">Status</small>
                                 <span class="badge-status processing">In Review</span>
                             </div>
                         </div>
-                        <div class="d-flex gap-2">
+                        <div class="d-flex flex-column flex-sm-row gap-2">
                             <button class="btn btn-sm btn-outline-custom">
                                 <i class="bi bi-eye me-1"></i>View Profile
                             </button>
@@ -1142,27 +1198,27 @@
                         </div>
                     </div>
                     <div class="review-item">
-                        <div class="d-flex justify-content-between align-items-start mb-3">
-                            <div>
+                        <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center align-items-sm-start mb-3 gap-2 text-center text-sm-start">
+                            <div class="flex-grow-1">
                                 <h5 class="text-white mb-2">Sarah Johnson</h5>
-                                <p class="text-muted mb-0">
-                                    <i class="bi bi-envelope me-2"></i>sarah.j@email.com
-                                    <span class="ms-3"><i class="bi bi-telephone me-2"></i>+1 (555) 234-5678</span>
+                                <p class="mb-0 small" style="color: #cbd5e1 !important;">
+                                    <i class="bi bi-envelope me-1"></i><span style="color: #cbd5e1 !important;">sarah.j@email.com</span>
+                                    <span class="d-block d-sm-inline ms-sm-3 mt-1 mt-sm-0"><i class="bi bi-telephone me-1"></i><span style="color: #cbd5e1 !important;">+1 (555) 234-5678</span></span>
                                 </p>
                             </div>
-                            <span class="badge-status pending">Pending</span>
+                            <span class="badge-status pending flex-shrink-0">Pending</span>
                         </div>
-                        <div class="row g-3 mb-3">
-                            <div class="col-md-6">
-                                <small class="text-muted d-block mb-1">Application Date</small>
+                        <div class="row g-3 mb-3 text-center text-sm-start">
+                            <div class="col-sm-6">
+                                <small class="d-block mb-1" style="color: #cbd5e1 !important;">Application Date</small>
                                 <span class="text-white">March 20, 2024</span>
                             </div>
-                            <div class="col-md-6">
-                                <small class="text-muted d-block mb-1">Status</small>
+                            <div class="col-sm-6">
+                                <small class="d-block mb-1" style="color: #cbd5e1 !important;">Status</small>
                                 <span class="badge-status pending">Awaiting Documents</span>
                             </div>
                         </div>
-                        <div class="d-flex gap-2">
+                        <div class="d-flex flex-column flex-sm-row gap-2">
                             <button class="btn btn-sm btn-outline-custom">
                                 <i class="bi bi-eye me-1"></i>View Profile
                             </button>
@@ -1172,27 +1228,27 @@
                         </div>
                     </div>
                     <div class="review-item">
-                        <div class="d-flex justify-content-between align-items-start mb-3">
-                            <div>
+                        <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center align-items-sm-start mb-3 gap-2 text-center text-sm-start">
+                            <div class="flex-grow-1">
                                 <h5 class="text-white mb-2">Michael Chen</h5>
-                                <p class="text-muted mb-0">
-                                    <i class="bi bi-envelope me-2"></i>michael.chen@email.com
-                                    <span class="ms-3"><i class="bi bi-telephone me-2"></i>+1 (555) 345-6789</span>
+                                <p class="mb-0 small" style="color: #cbd5e1 !important;">
+                                    <i class="bi bi-envelope me-1"></i><span style="color: #cbd5e1 !important;">michael.chen@email.com</span>
+                                    <span class="d-block d-sm-inline ms-sm-3 mt-1 mt-sm-0"><i class="bi bi-telephone me-1"></i><span style="color: #cbd5e1 !important;">+1 (555) 345-6789</span></span>
                                 </p>
                             </div>
-                            <span class="badge-status verified">Approved</span>
+                            <span class="badge-status verified flex-shrink-0">Approved</span>
                         </div>
-                        <div class="row g-3 mb-3">
-                            <div class="col-md-6">
-                                <small class="text-muted d-block mb-1">Application Date</small>
+                        <div class="row g-3 mb-3 text-center text-sm-start">
+                            <div class="col-sm-6">
+                                <small class="d-block mb-1" style="color: #cbd5e1 !important;">Application Date</small>
                                 <span class="text-white">March 10, 2024</span>
                             </div>
-                            <div class="col-md-6">
-                                <small class="text-muted d-block mb-1">Approval Date</small>
+                            <div class="col-sm-6">
+                                <small class="d-block mb-1" style="color: #cbd5e1 !important;">Approval Date</small>
                                 <span class="text-white">March 18, 2024</span>
                             </div>
                         </div>
-                        <div class="d-flex gap-2">
+                        <div class="d-flex flex-column flex-sm-row gap-2">
                             <button class="btn btn-sm btn-outline-custom">
                                 <i class="bi bi-eye me-1"></i>View Profile
                             </button>
@@ -1237,7 +1293,7 @@
                         <div class="d-flex justify-content-between align-items-start mb-3">
                             <div>
                                 <h5 class="text-white mb-2">Application #AER-2024-0892</h5>
-                                <p class="text-muted mb-0">
+                                <p class="mb-0" style="color: #cbd5e1 !important;">
                                     <i class="bi bi-person me-2"></i>John Smith
                                     <span class="ms-3"><i class="bi bi-envelope me-2"></i>john.smith@email.com</span>
                                 </p>
@@ -1247,7 +1303,7 @@
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="mb-2">
-                                    <small class="text-muted d-block mb-1">Merit Score</small>
+                                    <small class="d-block mb-1" style="color: #cbd5e1 !important;">Merit Score</small>
                                     <div class="d-flex align-items-center gap-2">
                                         <span class="text-white fw-bold fs-5">86%</span>
                                         <div class="progress flex-grow-1" style="height: 8px;">
@@ -1260,13 +1316,13 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="mb-2">
-                                    <small class="text-muted d-block mb-1">Status</small>
+                                    <small class="d-block mb-1" style="color: #cbd5e1 !important;">Status</small>
                                     <span class="badge-status processing">In Review</span>
                                 </div>
                             </div>
                         </div>
                         <div class="mt-3 pt-3 border-top border-secondary">
-                            <small class="text-muted d-block mb-2">
+                            <small class="d-block mb-2" style="color: #cbd5e1 !important;">
                                 <i class="bi bi-check-circle me-1"></i>Documents Verified
                             </small>
                             <div class="d-flex gap-2">
@@ -1315,7 +1371,7 @@
                         <div class="d-flex justify-content-between align-items-start mb-3">
                             <div>
                                 <h5 class="text-white mb-2"><i class="bi bi-file-earmark-pdf me-2"></i>Application Guidelines 2024.pdf</h5>
-                                <p class="text-muted mb-0">
+                                <p class="mb-0" style="color: #cbd5e1 !important;">
                                     <i class="bi bi-calendar3 me-2"></i>Uploaded: March 1, 2024
                                     <span class="ms-3"><i class="bi bi-file-earmark me-2"></i>2.4 MB</span>
                                 </p>
@@ -1339,7 +1395,7 @@
                         <div class="d-flex justify-content-between align-items-start mb-3">
                             <div>
                                 <h5 class="text-white mb-2"><i class="bi bi-file-earmark-image me-2"></i>Program Overview Presentation.pptx</h5>
-                                <p class="text-muted mb-0">
+                                <p class="mb-0" style="color: #cbd5e1 !important;">
                                     <i class="bi bi-calendar3 me-2"></i>Uploaded: February 28, 2024
                                     <span class="ms-3"><i class="bi bi-file-earmark me-2"></i>5.8 MB</span>
                                 </p>
@@ -1360,7 +1416,7 @@
                         <div class="d-flex justify-content-between align-items-start mb-3">
                             <div>
                                 <h5 class="text-white mb-2"><i class="bi bi-file-earmark-text me-2"></i>Application Form Template.docx</h5>
-                                <p class="text-muted mb-0">
+                                <p class="mb-0" style="color: #cbd5e1 !important;">
                                     <i class="bi bi-calendar3 me-2"></i>Uploaded: February 25, 2024
                                     <span class="ms-3"><i class="bi bi-file-earmark me-2"></i>156 KB</span>
                                 </p>
@@ -1394,11 +1450,11 @@
                         <h5 class="text-white mb-3"><i class="bi bi-person me-2"></i>Profile Information</h5>
                         <div class="row g-3 mb-3">
                             <div class="col-md-6">
-                                <label class="text-muted small d-block mb-2">Full Name</label>
+                                <label class="small d-block mb-2" style="color: #cbd5e1 !important;">Full Name</label>
                                 <input type="text" class="form-control bg-transparent border-secondary text-white" value="Admin User" />
                             </div>
                             <div class="col-md-6">
-                                <label class="text-muted small d-block mb-2">Email Address</label>
+                                <label class="small d-block mb-2" style="color: #cbd5e1 !important;">Email Address</label>
                                 <input type="email" class="form-control bg-transparent border-secondary text-white" value="admin@aeronix.com" />
                             </div>
                         </div>
@@ -1410,7 +1466,7 @@
                     <div class="review-item mb-3">
                         <h5 class="text-white mb-3"><i class="bi bi-shield-lock me-2"></i>Security Settings</h5>
                         <div class="mb-3">
-                            <label class="text-muted small d-block mb-2">Password</label>
+                            <label class="small d-block mb-2" style="color: #cbd5e1 !important;">Password</label>
                             <div class="d-flex gap-2">
                                 <input type="password" class="form-control bg-transparent border-secondary text-white flex-grow-1" placeholder="Enter new password" />
                                 <button class="btn btn-sm btn-outline-custom">
@@ -1496,7 +1552,7 @@
 
         // Sidebar item click handler
         document.querySelectorAll('.sidebar-item').forEach(item => {
-            item.addEventListener('click', function() {
+            item.addEventListener('click', function () {
                 const section = this.getAttribute('data-section');
                 if (section) {
                     switchSection(section);
@@ -1506,7 +1562,7 @@
 
         // Mobile sidebar item click handler
         document.querySelectorAll('.mobile-sidebar-item').forEach(item => {
-            item.addEventListener('click', function(e) {
+            item.addEventListener('click', function (e) {
                 e.preventDefault();
                 const section = this.getAttribute('data-section');
                 if (section) {
@@ -1516,7 +1572,7 @@
         });
 
         // Logout button handler - redirects to home page
-        document.getElementById('dashboardLogoutBtn')?.addEventListener('click', function(e) {
+        document.getElementById('dashboardLogoutBtn')?.addEventListener('click', function (e) {
             e.preventDefault();
             window.location.href = 'index.html';
         });
@@ -1544,10 +1600,10 @@
             document.addEventListener('click', (e) => {
                 const navbar = document.getElementById('mainNavbar');
                 const navbarToggler = document.querySelector('.navbar-toggler');
-                
+
                 // Check if click is outside navbar and navigation is open
-                if (navbarCollapse.classList.contains('show') && 
-                    !navbar.contains(e.target) && 
+                if (navbarCollapse.classList.contains('show') &&
+                    !navbar.contains(e.target) &&
                     !navbarToggler?.contains(e.target)) {
                     closeNavigation();
                 }
