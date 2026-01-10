@@ -244,7 +244,7 @@ function startFlyingSymbols() {
 
 // Start the animation when page loads
 document.addEventListener('DOMContentLoaded', () => {
-    startFlyingSymbols();
+    // startFlyingSymbols();
 });
 
 console.log('🚁 Aeronix animations loaded! (Optimized)');

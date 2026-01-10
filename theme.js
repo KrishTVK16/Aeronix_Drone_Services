@@ -5,12 +5,12 @@ const themeToggle = {
         const savedTheme = localStorage.getItem('aeronix-theme') || 'light';
         this.setTheme(savedTheme, false);
 
-        // Add event listener to theme toggle button
-        const toggleBtn = document.getElementById('themeToggle');
-        if (toggleBtn) {
-            toggleBtn.addEventListener('click', () => this.toggle());
-            this.updateToggleIcon(savedTheme);
-        }
+        // Add event listener to all theme toggle buttons
+        const toggleBtns = document.querySelectorAll('.theme-toggle');
+        toggleBtns.forEach(btn => {
+            btn.addEventListener('click', () => this.toggle());
+        });
+        this.updateToggleIcon(savedTheme);
     },
 
     setTheme(theme, save = true) {
@@ -28,17 +28,17 @@ const themeToggle = {
     },
 
     updateToggleIcon(theme) {
-        const toggleBtn = document.getElementById('themeToggle');
-        if (!toggleBtn) return;
-
-        const icon = toggleBtn.querySelector('i');
-        if (icon) {
-            if (theme === 'dark') {
-                icon.className = 'bi bi-sun-fill';
-            } else {
-                icon.className = 'bi bi-moon-fill';
+        const toggleBtns = document.querySelectorAll('.theme-toggle');
+        toggleBtns.forEach(btn => {
+            const icon = btn.querySelector('i');
+            if (icon) {
+                if (theme === 'dark') {
+                    icon.className = 'bi bi-sun-fill';
+                } else {
+                    icon.className = 'bi bi-moon-fill';
+                }
             }
-        }
+        });
     }
 };
 
