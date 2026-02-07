@@ -118,6 +118,10 @@ body {
     color: var(--autonix-cyan) !important;
 }
 
+.text-always-white {
+    color: white !important;
+}
+
 .text-gray {
     color: var(--text-muted);
 }
@@ -329,6 +333,13 @@ body {
         color: #2563eb;
     }
 
+    /* Active state visibility fix */
+    .dropdown-item.active,
+    .dropdown-item:active {
+        background-color: var(--autonix-blue) !important;
+        color: #ffffff !important;
+    }
+
     [data-theme="light"] .dropdown-item {
         color: #64748b;
     }
@@ -501,6 +512,19 @@ body {
     justify-content: center;
     padding-top: 80px;
     overflow: hidden;
+    background: linear-gradient(rgba(11, 15, 20, 0.85), rgba(11, 15, 20, 0.85)), url('Droneshero.webp') no-repeat center center/cover;
+}
+
+/* Ensure hero text remains white in light mode due to dark background image */
+[data-theme="light"] .hero-section .text-white,
+[data-theme="light"] .hero-section .lead,
+[data-theme="light"] .hero-section h1,
+[data-theme="light"] .hero-section p {
+    color: #ffffff !important;
+}
+
+[data-theme="light"] .hero-section .text-gray {
+    color: #e2e8f0 !important;
 }
 
 .hero-shape {
@@ -798,6 +822,35 @@ footer .text-muted {
     background: transparent;
     display: flex;
     gap: 0.5rem;
+}
+
+/* Global Logo Styling */
+.brand-logo-dark {
+    background-color: #000000;
+    color: #ffffff !important;
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.5rem;
+    display: inline-flex !important;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.brand-logo-dark:hover {
+    transform: scale(1.02);
+    color: #ffffff !important;
+}
+
+.brand-logo-dark span,
+.brand-logo-dark i {
+    color: #ffffff !important;
+}
+
+.brand-logo-dark i {
+    filter: brightness(0) invert(1);
+    /* Ensure icons are white */
 }
 
 .chat-input {
